@@ -9,3 +9,7 @@ Modify pass.yml with your actual Darksky key, coodinates and your Apixu key and 
 To run by executing launch.sh
 
 View in Kindle with current.html
+
+I serve this by running:
+
+	nohup python -m SimpleHTTPServer 8000 &
