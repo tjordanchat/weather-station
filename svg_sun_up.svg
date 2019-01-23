@@ -1,0 +1,13 @@
+<svg width="220px" height="220px" viewBox="0 0 220 220">
+  <!-- center of rotation -->
+  <circle cx="100" cy="100" r="10" style="fill: black;"/>
+  <circle cx="100" cy="100" r="90" stroke="black" stroke-width="20" fill="none" />
+
+  <!-- non-rotated arrow -->
+  <g id="arrow" style="stroke: black;">
+    <line x1="100" y1="100" x2="SUNRISE_X2" y2="SUNRISE_Y2" stroke-width="20"/>
+    <line x1="100" y1="100" x2="SUNSET_X2" y2="SUNSET_Y2" stroke-width="20"/>
+  </g>
+
+  <!-- rotated around center point -->
+</svg>
