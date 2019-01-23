@@ -13,3 +13,12 @@ View in Kindle with current.html
 I serve this by running:
 
 	nohup python -m SimpleHTTPServer 8000 &
+
+
+PREREQUISITES:
+   ImageMagick
+   python
+   bash
+   yq
+   jq
+	
