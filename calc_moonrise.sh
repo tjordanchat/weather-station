@@ -18,6 +18,6 @@ echo $moonrise_angle
 echo $moonset_angle
 
 
-convert -size 60x60 -strokewidth 5 xc:transparent -quality 100 -fill transparent -stroke black \
+convert -size 200x200 -strokewidth 5 xc:transparent -quality 100 -fill transparent -stroke black \
         -draw "arc  05,05 30,30 $moonrise_angle,$moonset_angle" draw_arc_partial.gif
 
