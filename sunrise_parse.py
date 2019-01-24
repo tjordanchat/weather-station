@@ -47,11 +47,6 @@ output = output.replace('SUNRISE_Y2', str(sunrise_y2))
 output = output.replace('SUNSET_X2', str(sunset_x2))
 output = output.replace('SUNSET_Y2', str(sunset_y2))
 
-print str(sunrise_angle)+" degrees"
-print str(sunset_angle)+" degrees"
-print str(sunrise_sec)+" seconds"
-print str(sunset_sec)+" seconds"
-
 # ALL WORK DONE ABOVE -->
 codecs.open('sunrise-processed.svg', 'w', encoding='utf-8').write(output)
 f.close()
