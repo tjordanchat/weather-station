@@ -2,6 +2,10 @@
 
 This is a Weather Console for a Kindle or other readers or a computer. 
 
+It uses the weather APIs from Darksky and Apixu
+
+To install:
+
 Rename pass.yml.EXAMPLE to pass.yml
 
 Modify pass.yml with your actual Darksky key, coodinates and your Apixu key and zip
