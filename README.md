@@ -16,9 +16,13 @@ I do this like:
 
    	   http://192.168.0.1:8000/new.html
 
+type ~ds in search window on reader and then visit http://blablabla:8000/new.html
+
 I serve this by running:
 
 	nohup python -m SimpleHTTPServer 8000 &
+
+You don't need to us port 8000. You can use any port
 
 
 PREREQUISITES:
@@ -33,3 +37,6 @@ Run this with crontab as below
 	*/15 * * * * /<Directory>/launch.sh 2>/dev/null
 
 I run this on OS X
+
+
+
