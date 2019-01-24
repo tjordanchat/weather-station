@@ -1,6 +1,6 @@
 # weather-station
 
-This is a weather display for a Kindle. 
+This is a Weather Console for a Kindle or other readers or a computer. 
 
 Rename pass.yml.EXAMPLE to pass.yml
 
@@ -10,7 +10,7 @@ To run by executing launch.sh
 
 View in Kindle with current.html
 
-If you want to view it on your computer go to new.html
+If you want to view it on your computer go to new.html. It rotates 90 degrees
 
 I do this like:
 
@@ -28,11 +28,11 @@ You don't need to us port 8000. You can use any port
 
 
 PREREQUISITES:
-   ImageMagick
-   python
-   bash
-   yq
-   jq
+   - ImageMagick
+   - python
+   - bash
+   - yq
+   - jq
 
 Run this with crontab as below
 	
