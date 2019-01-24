@@ -51,7 +51,10 @@ PREREQUISITES:
 
 I run this on OS X
 
+-- Enjoy
+
+----------------
+
 ![alt text](https://raw.githubusercontent.com/tjordanchat/weather-station/master/assets/img.png)
 
--- Enjoy
 
