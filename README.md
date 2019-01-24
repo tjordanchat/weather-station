@@ -24,4 +24,4 @@ PREREQUISITES:
 
 Run this with crontab as below
 	
-	*/15 * * * * /Users/jamestjordan/weather-station/launch.sh 2>/dev/null
+	*/15 * * * * /<Directory>/launch.sh 2>/dev/null
