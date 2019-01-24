@@ -14,11 +14,11 @@ To run by executing launch.sh
 
 View in Kindle with current.html
 
-Both the web pages refresh every 15 minutes to match the cron schedule.
-
 If you want to view it on your computer go to new.html. It rotates 90 degrees
 
-I do this like:
+Both the web pages refresh every 15 minutes to match the cron schedule.
+
+I visit this page like this:
 
    	   http://192.168.0.1:8000/new.html
 
@@ -43,7 +43,7 @@ PREREQUISITES:
 
 Run this with crontab as below
 	
-	*/15 * * * * /<Directory>/launch.sh 2>/dev/null
+	*/15 * * * * /<Directory-of-project>/launch.sh 2>/dev/null
 
 I run this on OS X
 
