@@ -64,13 +64,13 @@ output = output.replace('FEELS_LIKE', str(int(feels_like)))
 dew_point=int(data["currently"]["dewPoint"])
 if dew_point < 55:
     dew_value="0"
-elif dew_value < 60:
+elif dew_point < 60:
     dew_value="1"
-elif dew_value < 65:
+elif dew_point < 65:
     dew_value="2"
-elif dew_value < 70:
+elif dew_point < 70:
     dew_value="3"
-elif dew_value < 75:
+elif dew_point < 75:
     dew_value="4"
 else:
     dew_value="5"

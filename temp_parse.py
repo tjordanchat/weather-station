@@ -25,10 +25,14 @@ output = output.replace('HEIGHT', str(height))
 for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
-    temp_rel=(float(data["hourly"]["data"][x]["temperature"])-32)/50
-    if temp_rel > 1:
-        temp_rel = 1
-    output = output.replace('FILL_OPAC_'+str(x)+"_", str(temp_rel))
+    temp_rel=float(data["hourly"]["data"][x]["temperature"])
+    if temp_rel > 90:
+        temp_value = 1
+    elif temp_rel < 32:
+        temp_value = 0
+    else:
+        temp_value=(temp_rel-32)/58
+    output = output.replace('FILL_OPAC_'+str(x)+"_", str(temp_value))
 
 
 
