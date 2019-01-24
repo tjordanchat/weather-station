@@ -16,7 +16,7 @@ I do this like:
 
    	   http://192.168.0.1:8000/new.html
 
-type ~ds in search window on reader and then visit 	http://blablabla:8000/new.html
+type ~ds in search window on reader and then visit   	http://blablabla:8000/new.html
 
 I serve this by running:
 
