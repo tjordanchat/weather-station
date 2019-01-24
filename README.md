@@ -10,7 +10,13 @@ Rename pass.yml.EXAMPLE to pass.yml
 
 Modify pass.yml with your actual Darksky key, coodinates and your Apixu key and zip
 
-TO RUN execut launch.sh
+TO RUN execut launch.sh using crontab like this
+
+Type crontab -e
+
+and add this line
+
+	*/15 * * * * /<Root-directory-of-project>/launch.sh 2>/dev/null
 
 View in Kindle at current.html
 
@@ -20,7 +26,7 @@ Both the web pages refresh every 15 minutes to match the cron schedule.
 
 I visit this page from my device by browsing to:
 
-   	   http://192.168.0.1:8000/new.html
+   	   http://192.168.0.1:8000/new.html  or
 
    	   http://192.168.0.1:8000/current.html
 
@@ -42,10 +48,6 @@ PREREQUISITES:
    - bash
    - yq
    - jq
-
-Run this with crontab as below
-	
-	*/15 * * * * /<Root-directory-of-project>/launch.sh 2>/dev/null
 
 I run this on OS X
 
