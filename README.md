@@ -18,6 +18,10 @@ and add this line
 
 	*/15 * * * * /<Root-directory-of-project>/launch.sh 2>/dev/null
 
+Serve this on the server (Mac) by typing this line in the root directory of this project.
+
+	nohup python -m SimpleHTTPServer 8000 &
+
 View in Kindle at current.html
 
 If you want to view it on your computer go to new.html. It rotates 90 degrees
@@ -35,10 +39,6 @@ with a browser. Type ~ds in search window on reader and then visit
       http://192.168.0.1:8000/current.html or new.html
 
 on the device. On the server I serve this applcation by running:
-
-	nohup python -m SimpleHTTPServer 8000 &
-
-in the root directory of this project.
 
 You don't need to us port 8000. You can use any port
 
