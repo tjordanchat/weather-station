@@ -66,10 +66,10 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="345" y="400" width="70" height="190" xlink:href="DEW_POINT_ICON" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
-   <text fill="black" font-size="80px" y="380" x="350" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
-	 <image x="575" y="300" width="40" height="40" xlink:href="HUPDOWN" />
-   <text font-size="80px" y="360" x="660" text-anchor="middle" id="svg_6">HUMID</text>
-	 <image x="700" y="310" width="60" height="60" xlink:href="assets/humidity.png" />
+   <text fill="black" font-size="70px" y="370" x="360" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
+	 <image x="585" y="300" width="30" height="30" xlink:href="HUPDOWN" />
+   <text font-size="70px" y="360" x="660" text-anchor="middle" id="svg_6">HUMID</text>
+	 <image x="700" y="310" width="50" height="50" xlink:href="assets/humidity.png" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
    <line x1="390" y1="395" x2="765" y2="395" style="stroke:rgb(0,0,0);stroke-width:4" />
