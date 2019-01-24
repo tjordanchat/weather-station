@@ -28,7 +28,7 @@ for x in range(0, 24):
     temp_rel=(float(data["hourly"]["data"][x]["temperature"])-32)/50
     if temp_rel > 1:
         temp_rel = 1
-    output = output.replace('FILL_OPAC_'+str(x)+"_", str(int(temp_rel)))
+    output = output.replace('FILL_OPAC_'+str(x)+"_", str(temp_rel))
 
 
 
