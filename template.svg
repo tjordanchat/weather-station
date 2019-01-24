@@ -27,7 +27,8 @@
    <text font="DejaVuSans-ExtraLight" font-size="60px" y="48" x="420" text-anchor="start" id="svg_2">FORECAST_DAY_01</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="330" y="195" width="50" height="50" xlink:href="UPDOWN" />
-	 <text x="175" y="170" font-size="70px">UVINDEX</text> 
+	 <image x="155" y="99" width="100" height="100" xlink:href="assets/star.png" />
+	 <text x="180" y="170" font-size="70px">UVINDEX</text> 
    <text font-size="130px" y="300" x="480" text-anchor="middle" id="svg_6">HIGH_ONE°</text>
    <text font-size="70px" y="260" x="700" text-anchor="middle" id="svg_6">PRECIP_TXT%</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
@@ -45,7 +46,7 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
-	 <image x="20" y="260" width="70" height="70" xlink:href="assets/hand.jpeg" />
+	 <image x="20" y="260" width="70" height="70" xlink:href="assets/hand.jpg" />
    <text fill="black" font-size="75px" y="380" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
 
 <!-- EXPERIMENTAL -->
@@ -80,8 +81,8 @@
 	 <!--
 	 <image x="ANCHOR_150" y="110" width="70" height="66" xlink:href="assets/wind_icon.png" />
 	 -->
-	 <image x="253" y="117" width="80" height="80" xlink:href="sunrise-script-output.png" />
-	 <image x="234" y="95" width="650" height="650" xlink:href="draw_arc_partial.png" />
+	 <image x="263" y="117" width="80" height="80" xlink:href="sunrise-script-output.png" />
+	 <image x="244" y="95" width="650" height="650" xlink:href="draw_arc_partial.png" />
 
 
 	 <image x="ANCHOR_150" y="120" width="75" height="75" xlink:href="WIND_DIR_ICON" />
