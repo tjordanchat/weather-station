@@ -25,3 +25,5 @@ PREREQUISITES:
 Run this with crontab as below
 	
 	*/15 * * * * /<Directory>/launch.sh 2>/dev/null
+
+I run this on OS X
