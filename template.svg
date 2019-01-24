@@ -17,19 +17,17 @@
   <!--
    <text font-size="15px" y="415" x="735" text-anchor="start" id="svg_167">UNIT</text>
    -->
-   <text font-size="75" y="50" x="50" text-anchor="start" id="svg_276">CITY</text>
-   <!--
-   <text font-size="40px" y="460" x="220" text-anchor="middle" id="svg_25">STATUS</text>
-   -->
+   <text font-size="75" y="50" x="5" text-anchor="start" id="svg_276">CITY</text>
+   <text font-size="40px" y="420" x="220" text-anchor="middle" id="svg_25">STATUS</text>
 
-   <text font-size="45" y="95" x="50" text-anchor="start" id="svg_276">SUMMARY</text>
+   <text font-size="45" y="95" x="5" text-anchor="start" id="svg_276">SUMMARY</text>
 
 
    <text font="DejaVuSans-ExtraLight" font-size="60px" y="48" x="750" text-anchor="end" id="svg_2">TODAY</text>
    <text font="DejaVuSans-ExtraLight" font-size="60px" y="48" x="420" text-anchor="start" id="svg_2">FORECAST_DAY_01</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="330" y="175" width="50" height="50" xlink:href="UPDOWN" />
-	 <text x="340" y="165" font-size="60px">UVINDEX</text> 
+	 <text x="180" y="165" font-size="60px">UVINDEX</text> 
    <text font-size="150px" y="300" x="480" text-anchor="middle" id="svg_6">HIGH_ONE°</text>
    <text font-size="70px" y="250" x="700" text-anchor="middle" id="svg_6">PRECIP_TXT%</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
@@ -47,7 +45,7 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
-   <text fill="black" font-size="75px" y="420" x="50" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
+   <text fill="black" font-size="75px" y="380" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
 
 <!-- EXPERIMENTAL -->
 <!--
@@ -59,10 +57,10 @@
 	 <image x="50" y="510" width="80" height="80" xlink:href="phase.png"/>
 	 <image x="165" y="500" width="100" height="100" xlink:href="ICON_01" />
 	 -->
-   <text fill="black" font-size="30px" x="265" y="430" text-anchor="start" id="svg_8">HOUR</text>
+   <text fill="black" font-size="30px" x="5" y="260" text-anchor="start" id="svg_8">HOUR</text>
 
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
-	 <image x="400" y="100" width="120" height="80" xlink:href="ICON_BAR" />
+	 <image x="360" y="110" width="160" height="70" xlink:href="ICON_BAR" />
 	 <image x="540" y="105" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="620" y="100" width="120" height="80" xlink:href="PRECIPER"/>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
@@ -87,7 +85,7 @@
 
 	 <image x="ANCHOR_150" y="120" width="50" height="50" xlink:href="WIND_DIR_ICON" />
 
-   <text font-size="75" y="180" x="50" text-anchor="start" id="svg_276">WIND</text>
+   <text font-size="75" y="180" x="5" text-anchor="start" id="svg_276">WIND</text>
 
   </g>
  </g>
