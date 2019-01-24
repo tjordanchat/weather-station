@@ -45,8 +45,8 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
-	 <image x="20" y="260" width="70" height="70" xlink:href="assets/hand.jpg" />
-   <text fill="black" font-size="75px" y="380" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
+	 <image x="20" y="160" width="70" height="70" xlink:href="assets/hand.jpg" />
+   <text fill="black" font-size="75px" y="280" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
 
 <!-- EXPERIMENTAL -->
 <!--
