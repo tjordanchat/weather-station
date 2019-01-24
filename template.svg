@@ -87,7 +87,7 @@
    <text font-size="75" y="80" x="5" text-anchor="start" id="svg_276">WIND</text>
 	 <image x="ANCHOR_150" y="20" width="75" height="75" xlink:href="WIND_DIR_ICON" />
 	 <image x="155" y="2" width="100" height="100" xlink:href="assets/star.png" />
-	 <text x="185" y="67" font-size="60px">UVINDEX</text> 
+	 <text x="185" y="69" font-size="60px">UVINDEX</text> 
 	 <image x="263" y="17" width="80" height="80" xlink:href="sunrise-script-output.png" />
 	 <image x="244" y="-4" width="650" height="650" xlink:href="draw_arc_partial.png" />
 	 <image x="360" y="10" width="160" height="70" xlink:href="ICON_BAR" />
