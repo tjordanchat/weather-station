@@ -38,7 +38,7 @@ with open('AP.json') as g:
 feels_like=int(data["currently"]["apparentTemperature"])
 
 wind_degree=ap["current"]["wind_degree"]
-wind_dir_url="assets/ARROW_"+getCardinal(wind_degree)+".jpg"
+wind_dir_url="assets/W_IND_"+getCardinal(wind_degree)+".jpg"
 
 image = ap["current"]["condition"]["code"]
 image_url = 'assets/' + str(image) + '.png'
@@ -129,9 +129,9 @@ output = output.replace('SUMMARY',summary)
 wind=str(int(data["currently"]["windSpeed"]+.5))
 
 output = output.replace('WIND',wind)
-anchor_x="105"
+anchor_x="90"
 if data["currently"]["windSpeed"]+.5 < 10:
-    anchor_x="155"
+    anchor_x="140"
 output = output.replace('ANCHOR_150',anchor_x)
 
 
