@@ -22,7 +22,9 @@ Serve this on the server (Mac) by typing this line in the root directory of this
 
 	nohup python -m SimpleHTTPServer 8000 &
 
-View in Kindle at current.html
+You will have to retype the above command every time you reboot your server.
+
+View with Kindle at current.html
 
 If you want to view it on your computer go to new.html. It rotates 90 degrees
 
