@@ -12,9 +12,7 @@ Modify pass.yml with your actual Darksky key, coodinates and your Apixu key and 
 
 TO RUN execut launch.sh using crontab like this
 
-Type crontab -e
-
-and add this line
+Type crontab -e and add this line
 
 	*/15 * * * * /<Root-directory-of-project>/launch.sh 2>/dev/null
 
