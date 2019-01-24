@@ -81,8 +81,10 @@
 	 <!--
 	 <image x="ANCHOR_150" y="110" width="70" height="66" xlink:href="assets/wind_icon.png" />
 	 -->
-	 <image x="253" y="132" width="80" height="80" xlink:href="sunrise-script-output.png" />
-	 <image x="235" y="110" width="650" height="650" xlink:href="draw_arc_partial.gif" />
+	 <image x="253" y="117" width="80" height="80" xlink:href="sunrise-script-output.png" />
+	 <image x="234" y="95" width="650" height="650" xlink:href="draw_arc_partial.png" />
+
+
 	 <image x="ANCHOR_150" y="120" width="50" height="50" xlink:href="WIND_DIR_ICON" />
 
    <text font-size="75" y="180" x="50" text-anchor="start" id="svg_276">WIND</text>
