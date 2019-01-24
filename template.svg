@@ -29,6 +29,7 @@
    <text font="DejaVuSans-ExtraLight" font-size="60px" y="48" x="420" text-anchor="start" id="svg_2">FORECAST_DAY_01</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="330" y="175" width="50" height="50" xlink:href="UPDOWN" />
+	 <text x="340" y="165" font-size="60px">UVINDEX</text> 
    <text font-size="150px" y="300" x="480" text-anchor="middle" id="svg_6">HIGH_ONE°</text>
    <text font-size="70px" y="250" x="700" text-anchor="middle" id="svg_6">PRECIP_TXT%</text>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->

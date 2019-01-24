@@ -175,6 +175,9 @@ output = output.replace('ICON_02', 'assets/' + str(ap["forecast"]["forecastday"]
 output = output.replace('ICON_03', 'assets/' + str(ap["forecast"]["forecastday"][3]["day"]["condition"]["code"]) + '.png') 
 output = output.replace('ICON_04', 'assets/' + str(ap["forecast"]["forecastday"][4]["day"]["condition"]["code"]) + '.png')
 
+uvIndex=data["currently"]["uvIndex"]
+output = output.replace('UVINDEX', str(uvIndex))
+
 date_epoch=ap["forecast"]["forecastday"][1]["date_epoch"] 
 concise_day= datetime.datetime.fromtimestamp(date_epoch).strftime('%a')
 output = output.replace('FORECAST_DAY_01', concise_day)
