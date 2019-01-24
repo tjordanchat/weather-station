@@ -10,6 +10,12 @@ To run by executing launch.sh
 
 View in Kindle with current.html
 
+If you want to view it on your computer go to new.html
+
+I do this like:
+
+   http://192.168.0.1:8000/new.html
+
 I serve this by running:
 
 	nohup python -m SimpleHTTPServer 8000 &
