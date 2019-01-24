@@ -57,4 +57,5 @@ I run this on OS X
 
 ![alt text](https://raw.githubusercontent.com/tjordanchat/weather-station/master/assets/img.png)
 
+stable REL_0.1
 
