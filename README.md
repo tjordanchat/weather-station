@@ -20,7 +20,7 @@ type ~ds in search window on reader and then visit
 
       http://blablabla:8000/new.html
 
-on the device.  I serve this by running:
+on the device.  I serve this app by running:
 
 	nohup python -m SimpleHTTPServer 8000 &
 
