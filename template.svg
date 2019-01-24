@@ -65,6 +65,7 @@
 	 <image x="360" y="110" width="160" height="70" xlink:href="ICON_BAR" />
 	 <image x="550" y="115" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="620" y="110" width="120" height="80" xlink:href="PRECIPER"/>
+	 <image x="720" y="110" width="40" height="40" xlink:href="INTENSITY"/>
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="345" y="400" width="70" height="190" xlink:href="DEW_POINT_ICON" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->

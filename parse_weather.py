@@ -61,6 +61,20 @@ output = output.replace('ICON_BAR', bar_url)
 output = output.replace('WIND_DIR_ICON', wind_dir_url)
 output = output.replace('FEELS_LIKE', str(int(feels_like)))
 
+rain_intens=float(data["currently"]["precipIntensity"])
+if rain_intens > 2:
+    intensity="VIOLENT"
+elif rain_intens > 0.3:
+    intensity="HEAVY"
+elif rain_intens > 0.1:
+    intensity="MODERATE"
+elif rain_intens > 0:
+    intensity="LIGHT"
+else:
+    intensity="NA"
+rain_intens_icon="assets/INTEN_"+intensity+".jpg"
+output = output.replace('INTENSITY',rain_intens_icon)
+
 dew_point=int(data["currently"]["dewPoint"])
 if dew_point < 55:
     dew_value="0"
