@@ -80,7 +80,8 @@
 	 <!--
 	 <image x="ANCHOR_150" y="110" width="70" height="66" xlink:href="assets/wind_icon.png" />
 	 -->
-	 <image x="240" y="120" width="70" height="70" xlink:href="sunrise-script-output.png" />
+	 <image x="253" y="132" width="50" height="50" xlink:href="sunrise-script-output.png" />
+	 <image x="241" y="119" width="120" height="120" xlink:href="/tmp/draw_arc_partial.gif" />
 	 <image x="ANCHOR_150" y="120" width="50" height="50" xlink:href="WIND_DIR_ICON" />
 
    <text font-size="75" y="180" x="50" text-anchor="start" id="svg_276">WIND</text>
