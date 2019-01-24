@@ -26,10 +26,10 @@ for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
     temp_rel=float(data["hourly"]["data"][x]["windSpeed"])
-    if temp_rel > 20:
+    if temp_rel > 30:
         wind=1.0
     else:
-        wind=float(temp_rel/20)
+        wind=float(temp_rel/30)
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(wind))
 
 
