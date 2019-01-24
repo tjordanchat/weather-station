@@ -20,12 +20,13 @@ type ~ds in search window on reader and then visit
 
       http://blablabla:8000/new.html
 
-I serve this by running:
+on the device.  I serve this by running:
 
 	nohup python -m SimpleHTTPServer 8000 &
 
-You don't need to us port 8000. You can use any port
+in the root directory of this project.
 
+You don't need to us port 8000. You can use any port
 
 PREREQUISITES:
    - ImageMagick
