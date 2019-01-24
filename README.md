@@ -10,6 +10,8 @@ To run by executing launch.sh
 
 View in Kindle with current.html
 
+Both the web pages refresh every 15 minutes to match the cron schedule.
+
 If you want to view it on your computer go to new.html. It rotates 90 degrees
 
 I do this like:
