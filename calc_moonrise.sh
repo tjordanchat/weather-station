@@ -14,7 +14,4 @@ export secPer24Hours=$(( 60*60*24 ))
 export moonrise_angle=$(( (360*( $RISE_SEC % $secPer24Hours )/$secPer24Hours)+90 ))
 export moonset_angle=$(( (360*( $SET_SEC % $secPer24Hours )/$secPer24Hours)+90 ))
 
-
-convert -size 200x200 -density 400 -strokewidth 3 xc:transparent -quality 100 -fill transparent -stroke black \
-        -draw "arc  05,05 30,30 $moonrise_angle,$moonset_angle" draw_arc_partial.png
-
+echo $( ./calc-arc.py 100 100 50 $moonrise_angle $moonset_angle )

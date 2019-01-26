@@ -29,7 +29,7 @@ for x in range(0, 24):
     if temp_rel > 30:
         wind=1.0
     else:
-        wind=float(temp_rel/30)
+        wind=float(temp_rel/30)**2
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(wind))
 
 

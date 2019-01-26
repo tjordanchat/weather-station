@@ -1,10 +1,12 @@
 import myql
+import os
 import urllib2
 from xml.dom import minidom
 import time
 import datetime
 import codecs
 import json
+import subprocess
 from pprint import pprint
 
 def getCardinal(angle):
@@ -47,14 +49,18 @@ image_url = 'assets/' + str(image) + '.png'
 output = codecs.open('template.svg', 'r', encoding='utf-8').read()
 
 # Do calculations
-pressure=ap["current"]["pressure_mb"]
-fpressure=data["hourly"]["data"][2]["pressure"]
+pressure=data["currently"]["pressure"]
+fpressure=data["hourly"]["data"][6]["pressure"]
 if pressure > fpressure:
     tending="Cloud"
 else:
     tending="Sun"
+# 33.864
+result = os.system('./calc_moonrise.sh > arc_path')
+moonrise_arc=open('arc_path', 'r').read()
+#output = output.replace('MOONRISE_ARC', moonrise_arc)
 
-bar=int((float(pressure) - 873)/34)
+bar=int((float(pressure) - 982)/17)
 bar_url = 'assets/'+tending+"_" + str(bar) + '.jpg'
 output = output.replace('ICON_BAR', bar_url)
 
@@ -143,9 +149,9 @@ output = output.replace('SUMMARY',summary)
 wind=str(int(data["currently"]["windSpeed"]+.5))
 
 output = output.replace('WIND',wind)
-anchor_x="45"
+anchor_x="85"
 if data["currently"]["windSpeed"]+.5 < 10:
-    anchor_x="105"
+    anchor_x="85"
 output = output.replace('ANCHOR_150',anchor_x)
 
 

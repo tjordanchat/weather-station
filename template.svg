@@ -1,7 +1,12 @@
+<html>
+<head>
+</head>
+<body>
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
  <g>
 <image x="105" y="130" width="240" height="240" xlink:href="ICON_ONE" />
 <!--
+ <path d="MOONRISE_ARC"/>
 <line x1="50" y1="490" x2="345" y2="490" style="stroke:rgb(0,0,0);stroke-width:4" />
 -->
 <text font-size="20px" y="580" x="10" text-anchor="start" >W</text>
@@ -45,8 +50,8 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
-	 <image x="20" y="160" width="70" height="70" xlink:href="assets/hand.jpg" />
-   <text fill="black" font-size="75px" y="280" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
+	 <image x="20" y="160" width="70" height="70" xlink:href="assets/masks.jpg" />
+   <text fill="black" font-size="75px" y="290" x="5" text-anchor="start" id="svg_8">FEELS_LIKE°</text>
 
 <!-- EXPERIMENTAL -->
 <!--
@@ -65,7 +70,7 @@
 	 <image x="345" y="400" width="70" height="190" xlink:href="DEW_POINT_ICON" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <text fill="black" font-size="70px" y="340" x="360" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
-	 <image x="585" y="280" width="30" height="30" xlink:href="HUPDOWN" />
+	 <image x="595" y="260" width="30" height="30" xlink:href="HUPDOWN" />
    <text font-size="70px" y="320" x="660" text-anchor="middle" id="svg_6">HUMID</text>
 	 <image x="700" y="270" width="50" height="50" xlink:href="assets/humidity.png" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
@@ -84,7 +89,7 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->      <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
-   <text font-size="75" y="80" x="5" text-anchor="middle" id="svg_276">WIND</text>
+   <text font-size="75" y="80" x="35" text-anchor="middle" id="svg_276">WIND</text>
 	 <image x="ANCHOR_150" y="20" width="75" height="75" xlink:href="WIND_DIR_ICON" />
 	 <image x="155" y="2" width="100" height="100" xlink:href="assets/star.png" />
 	 <text x="185" y="69" font-size="60px">UVINDEX</text> 
@@ -98,3 +103,5 @@
   </g>
  </g>
 </svg>
+</body>
+</html>
