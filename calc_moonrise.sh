@@ -11,7 +11,7 @@ export SET_SEC=$(echo $MOONSET | sed 's#[":]# #g' | awk '$3 ~ /PM/ {print (12+$1
 export secPer24Hours=$(( 60*60*24 ))
 #echo $secPer24Hours
 
-export moonrise_angle=$(( (360*( $RISE_SEC % $secPer24Hours )/$secPer24Hours)+90 ))
+export moonrise_angle=$(( 360*( $RISE_SEC % $secPer24Hours)/$secPer24Hours+90 ))
 export moonset_angle=$(( (360*( $SET_SEC % $secPer24Hours )/$secPer24Hours)+90 ))
 
 echo $( ./calc-arc.py 100 100 50 $moonrise_angle $moonset_angle )

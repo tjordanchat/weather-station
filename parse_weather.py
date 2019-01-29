@@ -150,8 +150,8 @@ wind=str(int(data["currently"]["windSpeed"]+.5))
 
 output = output.replace('WIND',wind)
 anchor_x="85"
-if data["currently"]["windSpeed"]+.5 < 10:
-    anchor_x="85"
+if data["currently"]["windSpeed"] < 10:
+    anchor_x="65"
 output = output.replace('ANCHOR_150',anchor_x)
 
 
