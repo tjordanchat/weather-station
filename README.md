@@ -44,6 +44,7 @@ You don't need to us port 8000. You can use any port
 
 PREREQUISITES:
    - ImageMagick
+   - pngcrush
    - python
    - bash
    - yq
