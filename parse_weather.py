@@ -1,4 +1,3 @@
-import myql
 import os
 import urllib2
 from xml.dom import minidom
