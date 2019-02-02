@@ -7,6 +7,16 @@ import codecs
 import json
 from pprint import pprint
 
+def polarToCartesian(centerX, centerY, radius, angleInDegrees):
+   angleInRadians = (int(angleInDegrees)-90) * math.pi / 180.0;
+   return [ int(centerX) + (radius * math.cos(angleInRadians)), int(centerY) + (radius * math.sin(angleInRadians))]
+
+def describeArc(x, y, radius, startAngle, endAngle):
+   start = polarToCartesian(x, y, int(radius), endAngle)
+   end = polarToCartesian(x, y, int(radius), startAngle)
+   largeArcFlag = "0" if int(endAngle) - int(startAngle) <= 180 else "1" 
+   return "M "+str(x)+" "+str(y)+" A "+str(radius)+" "+str(radius)+" 0 "+str(largeArcFlag)+" 0 "+str(end[0])+" "+str(end[1])
+
 with open('AP.json') as g:
     ap = json.load(g)
 
@@ -17,6 +27,38 @@ with open('DS.json') as f:
 output = codecs.open('svg_sun_up.svg', 'r', encoding='utf-8').read()
 
 # ALL WORK DONE BELOW -->
+moonrise= ap["forecast"]["forecastday"][0]["astro"]["moonrise"]
+moonset=ap["forecast"]["forecastday"][0]["astro"]["moonset"]
+
+secPer24Hours=60*60*24
+
+mrise_array=moonrise.replace(":"," ")
+mset_array=moonset.replace(":"," ")
+
+roffset=0
+if mrise_array[2] == "PM":
+   roffset=12
+
+soffset=0
+if mset_array[2] == "PM":
+   soffset=12
+
+mrise_hour=int(mrise_array[0])
+mset_hour=int(mset_array[0])
+
+mrise_minute=int(mrise_array[1])
+mset_minute=int(mset_array[1])
+
+rise_sec=(roffset+mrise_hour)*60*60+(mrise_minute*60)
+set_sec=(soffset+mset_hour)*60*60+(mset_minute*60)
+
+moonrise_angle=360*( rise_sec % secPer24Hours)/secPer24Hours-90
+moonset_angle=(360*( set_sec % secPer24Hours )/secPer24Hours)-90
+
+msize=15
+moonrise_arc=describeArc(20, 185, msize, moonrise_angle, moonset_angle)
+
+output = output.replace('MOONRISE_ARC', str(moonrise_arc))
 
 offset=10
 width=12
