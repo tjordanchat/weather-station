@@ -5,10 +5,8 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
  <g>
 <image x="105" y="130" width="240" height="240" xlink:href="ICON_ONE" />
-<!--
- <path d="MOONRISE_ARC"/>
-<line x1="50" y1="490" x2="345" y2="490" style="stroke:rgb(0,0,0);stroke-width:4" />
--->
+
+
 <text font-size="20px" y="580" x="10" text-anchor="start" >W</text>
 <image x="35" y="550" width="320" height="30" xlink:href="wind-script-output.png" />
 <text font-size="20px" y="540" x="10" text-anchor="start" >H</text>

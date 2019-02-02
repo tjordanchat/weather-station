@@ -1,4 +1,5 @@
 import os
+import math
 import urllib2
 from xml.dom import minidom
 import time
@@ -7,6 +8,17 @@ import codecs
 import json
 import subprocess
 from pprint import pprint
+
+def polarToCartesian(centerX, centerY, radius, angleInDegrees):
+   angleInRadians = (int(angleInDegrees)-90) * math.pi / 180.0;
+   return [ int(centerX) + (radius * math.cos(angleInRadians)),
+            int(centerY) + (radius * math.sin(angleInRadians))]
+
+def describeArc(x, y, radius, startAngle, endAngle):
+   start = polarToCartesian(x, y, int(radius), endAngle)
+   end = polarToCartesian(x, y, int(radius), startAngle)
+   largeArcFlag = "0" if int(endAngle) - int(startAngle) <= 180 else "1" 
+   return "M "+str(x)+" "+str(y)+" A "+str(radius)+" "+str(radius)+" 0 "+str(largeArcFlag)+" 0 "+str(end[0])+" "+str(end[1])
 
 def getCardinal(angle):
 	directions = 8
@@ -36,6 +48,7 @@ with open('DS.json') as f:
 with open('AP.json') as g:
     ap = json.load(g)
 
+
 feels_like=int(data["currently"]["apparentTemperature"])
 
 wind_degree=ap["current"]["wind_degree"]
@@ -55,9 +68,6 @@ if pressure > fpressure:
 else:
     tending="Sun"
 # 33.864
-result = os.system('./calc_moonrise.sh > arc_path')
-moonrise_arc=open('arc_path', 'r').read()
-#output = output.replace('MOONRISE_ARC', moonrise_arc)
 
 bar=int((float(pressure) - 982)/17)
 bar_url = 'assets/'+tending+"_" + str(bar) + '.jpg'

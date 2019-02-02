@@ -7,6 +7,9 @@ import codecs
 import json
 from pprint import pprint
 
+with open('AP.json') as g:
+    ap = json.load(g)
+
 with open('DS.json') as f:
     data = json.load(f)
 

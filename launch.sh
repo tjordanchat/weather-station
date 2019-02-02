@@ -29,6 +29,6 @@ python parse_weather.py
 /usr/local/bin/convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
 
 #We optimize the image (necessary for viewing on the kindle)
-/usr/local/bin/pngcrush -q -c 0 weather-processed.png weather-script-output.png > /dev/null 2>&1
-/usr/local/bin/pngcrush -q -c 0 weather-processed2.png weather-script-output2.png > /dev/null 2>&1
+/usr/local/bin/pngcrush -q -c 0 weather-processed.png weather-script-output.png
+/usr/local/bin/pngcrush -q -c 0 weather-processed2.png weather-script-output2.png
 
