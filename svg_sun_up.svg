@@ -1,13 +1,15 @@
-<svg width="200px" height="200px" viewBox="0 0 220 220">
+<svg width="220px" height="220px" viewBox="0 0 220 220">
   <!-- center of rotation -->
-  <circle cx="100" cy="100" r="100" style="fill: black;"/>
-  <circle cx="100" cy="100" r="100" stroke="black" stroke-width="20" fill="none" />
+  <circle cx="100" cy="100" r="90" style="fill: transparent;" stroke-width="20"/>
+  <circle cx="100" cy="100" r="10" stroke="black" stroke-width="10" fill="none" />
 
   <!-- non-rotated arrow -->
   <g id="arrow" style="stroke: black;">
     <line x1="100" y1="100" x2="SUNRISE_X2" y2="SUNRISE_Y2" stroke-width="20"/>
     <line x1="100" y1="100" x2="SUNSET_X2" y2="SUNSET_Y2" stroke-width="20"/>
+    <!--
     <path d="MOONRISE_ARC" stroke-width="20" fill="transparent"/>
+    -->
 
   </g>
 
