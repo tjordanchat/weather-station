@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
 }</style></head><body>
-<canvas id="canvas" width="200" height="200"></canvas>
+<canvas id="canvas" width="360" height="360"></canvas>
 <script src='https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script>
 <script >function MoonPainter(canvas) {
 	this.lineWidth = 10;
@@ -79,9 +79,13 @@ MoonPainter.prototype = {
 		this.ctx.restore();
 	} };
 
+with open('DS.json') as f:
+    data = json.load(f)
+
+phase=data["daily"]["data"][0]["moonPhase"]
 
 var painter = new MoonPainter(document.getElementById('canvas'));
-var phase = 0;
+var phase = .03;
 
 function repaint() {
 	painter.paint(phase += .02);
@@ -90,7 +94,10 @@ function repaint() {
 		phase = 0;
 	}
 
-	setTimeout(repaint, 50);
+//	var img    = this.canvas.toDataURL("image/png");
+//	document.write('<img src="'+img+'"/>');
+
+//	setTimeout(repaint, 50);
 }
 
 repaint();

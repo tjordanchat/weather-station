@@ -19,7 +19,8 @@ curl -k https://api.usno.navy.mil/imagery/moon.png > phase.png
 ./generate_sunrise.sh
 ./generate_humid_line.sh
 ./generate_wind_line.sh
-./calc_moonrise.sh
+#./calc_moonrise.sh
+/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
 
 #Parse Weather and replace placeholder text in the svg template file
 python parse_weather.py
