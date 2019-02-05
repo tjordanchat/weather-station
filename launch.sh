@@ -12,7 +12,8 @@ curl https://api.darksky.net/forecast/$DARK_KEY/$DARK_LAT,$DARK_LONG | /usr/loca
 
 curl -k "http://api.apixu.com/v1/forecast.json?key=$APIX_KEY&q=$APIX_ZIP&days=5"  | /usr/local/bin/jq . > AP.json
 
-curl -k https://api.usno.navy.mil/imagery/moon.png > phase.png
+MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase)
+#curl -k https://api.usno.navy.mil/imagery/moon.png > phase.png
 
 ./generate_percip_line.sh
 ./generate_temp_line.sh
