@@ -20,6 +20,7 @@ curl -k https://api.usno.navy.mil/imagery/moon.png > phase.png
 ./generate_humid_line.sh
 ./generate_wind_line.sh
 #./calc_moonrise.sh
+sed -i "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
 '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
 
 #Parse Weather and replace placeholder text in the svg template file
