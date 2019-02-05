@@ -55,8 +55,7 @@ set_sec=(soffset+mset_hour)*60*60+(mset_minute*60)
 moonrise_angle=360*( rise_sec % secPer24Hours)/secPer24Hours-90
 moonset_angle=(360*( set_sec % secPer24Hours )/secPer24Hours)-90
 
-msize=110
-moonrise_arc=describeArc(163, 10, 200, moonrise_angle, moonset_angle)
+moonrise_arc=describeArc(100, 100, 110, moonrise_angle, moonset_angle)
 
 output = output.replace('MOONRISE_ARC', str(moonrise_arc))
 
