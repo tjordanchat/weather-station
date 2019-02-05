@@ -79,13 +79,9 @@ MoonPainter.prototype = {
 		this.ctx.restore();
 	} };
 
-with open('DS.json') as f:
-    data = json.load(f)
-
-phase=data["daily"]["data"][0]["moonPhase"]
+var phase=.03;
 
 var painter = new MoonPainter(document.getElementById('canvas'));
-var phase = .03;
 
 function repaint() {
 	painter.paint(phase += .02);
