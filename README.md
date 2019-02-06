@@ -50,6 +50,9 @@ PREREQUISITES:
    - yq
    - jq
 
+PYTHON:
+   - pip install webkit2png
+
 I run this on OS X
 
 - REL_0.1
