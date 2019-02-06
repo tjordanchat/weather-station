@@ -63,6 +63,7 @@ This is unorgabized for now but is my bash history egrep install.
   -  brew install pngcrush
   -  brew install node
   -  brew install node
+  -  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   -  pip install webkit2png
   -  python python-webkit2png/setup.py install
   -  sudo python python-webkit2png/setup.py install
@@ -74,7 +75,6 @@ This is unorgabized for now but is my bash history egrep install.
   -  sudo npm install --save html-to-image
   -  npm install xmlhttprequest
   -  npm install xmlhttp
-
 
 I run this on OS X
 
