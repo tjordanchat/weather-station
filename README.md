@@ -53,9 +53,33 @@ PREREQUISITES:
 PYTHON:
    - pip install webkit2png
 
+This is unorgabized for now but is my bash history egrep install.
+
+    3  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   14  brew install yq
+   15  brew install jq
+   20  brew install ImageMagick
+   41  brew install pngcrush
+   51  brew install pngcrush
+  351  brew install node
+  354  brew install node
+  369  pip install webkit2png
+  377  python python-webkit2png/setup.py install
+  378  sudo python python-webkit2png/setup.py install
+  379  brew flashplugin-installer
+  380  brew install flashplugin-installer
+  381  sudo python python-webkit2png/setup.py install
+  382  npm install --save html-to-image
+  383  sudo npm install npm
+  384  sudo npm install --save html-to-image
+  486  npm install xmlhttprequest
+  488  npm install xmlhttp
+  617  h | egrep install
+
+
 I run this on OS X
 
-- REL_0.1
+- REL_0.10
 
 -- Enjoy
 
