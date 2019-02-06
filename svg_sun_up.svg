@@ -8,8 +8,8 @@
     <line x1="100" y1="100" x2="SUNRISE_X2" y2="SUNRISE_Y2" stroke-width="20"/>
     <line x1="100" y1="100" x2="SUNSET_X2" y2="SUNSET_Y2" stroke-width="20"/>
     <!--
-    <path d="MOONRISE_ARC" stroke-width="20" fill="transparent"/>
     -->
+    <path d="MOONRISE_ARC" stroke-width="20" fill="transparent"/>
 
   </g>
 

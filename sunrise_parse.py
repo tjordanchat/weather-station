@@ -15,7 +15,7 @@ def describeArc(x, y, radius, startAngle, endAngle):
    start = polarToCartesian(x, y, int(radius), endAngle)
    end = polarToCartesian(x, y, int(radius), startAngle)
    largeArcFlag = "0" if int(endAngle) - int(startAngle) <= 180 else "1" 
-   return "M "+str(x)+" "+str(y)+" A "+str(radius)+" "+str(radius)+" 0 "+str(largeArcFlag)+" 0 "+str(end[0])+" "+str(end[1])
+   return "M "+str(start[0])+" "+str(start[1])+" A "+str(radius)+" "+str(radius)+" 0 "+str(largeArcFlag)+" 0 "+str(end[0])+" "+str(end[1])
 
 with open('AP.json') as g:
     ap = json.load(g)

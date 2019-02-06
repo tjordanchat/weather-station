@@ -166,7 +166,7 @@ output = output.replace('ANCHOR_150',anchor_x)
 
 now=data["currently"]["time"]
 concisedate= datetime.datetime.fromtimestamp(now).strftime('%b %d')
-concisetime= datetime.datetime.fromtimestamp(now).strftime('%H %M')
+concisetime= datetime.datetime.fromtimestamp(now).strftime('%H:%M')
 output = output.replace('TODAY',concisedate)
 output = output.replace('HOUR', concisetime)
 
