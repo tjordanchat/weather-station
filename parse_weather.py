@@ -163,6 +163,19 @@ if data["currently"]["windSpeed"] < 10:
     anchor_x="65"
 output = output.replace('ANCHOR_150',anchor_x)
 
+parcip_type=data["currently"]["precipType"]
+if parcip_type == "rain":
+	parcip_type_icon="assets/RainDrips.png"
+elif parcip_type == "snow":
+	parcip_type_icon="assets/SnowFlake.png"
+elif parcip_type == "hail":
+	parcip_type_icon="assets/Hail.png"
+elif parcip_type == "sleet":
+	parcip_type_icon="assets/Sleet.png"
+else:
+	parcip_type="INTEN_NA.jpg"
+output = output.replace('__PARCIP_TYPE_ICON__',parcip_type)
+
 
 now=data["currently"]["time"]
 concisedate= datetime.datetime.fromtimestamp(now).strftime('%b %d')
