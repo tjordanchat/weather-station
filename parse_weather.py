@@ -163,7 +163,10 @@ if data["currently"]["windSpeed"] < 10:
     anchor_x="65"
 output = output.replace('ANCHOR_150',anchor_x)
 
-parcip_type=data["currently"]["precipType"]
+if rain_intens > 0:
+  parcip_type=data["currently"]["precipType"]
+else:
+	parcip_type="NA"
 if parcip_type == "rain":
 	parcip_type_icon="assets/RainDrop.png"
 elif parcip_type == "snow":
@@ -173,7 +176,7 @@ elif parcip_type == "hail":
 elif parcip_type == "sleet":
 	parcip_type_icon="assets/Sleet.png"
 else:
-	parcip_type="INTEN_NA.jpg"
+	parcip_type_icon="assets/INTEN_NA.jpg"
 output = output.replace('__PARCIP_TYPE_ICON__',parcip_type_icon)
 
 
