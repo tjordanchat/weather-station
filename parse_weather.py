@@ -165,7 +165,7 @@ output = output.replace('ANCHOR_150',anchor_x)
 
 parcip_type=data["currently"]["precipType"]
 if parcip_type == "rain":
-	parcip_type_icon="assets/RainDrips.png"
+	parcip_type_icon="assets/RainDrop.png"
 elif parcip_type == "snow":
 	parcip_type_icon="assets/SnowFlake.png"
 elif parcip_type == "hail":
@@ -174,7 +174,7 @@ elif parcip_type == "sleet":
 	parcip_type_icon="assets/Sleet.png"
 else:
 	parcip_type="INTEN_NA.jpg"
-output = output.replace('__PARCIP_TYPE_ICON__',parcip_type)
+output = output.replace('__PARCIP_TYPE_ICON__',parcip_type_icon)
 
 
 now=data["currently"]["time"]

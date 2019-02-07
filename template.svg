@@ -100,7 +100,7 @@
 	 <image x="360" y="15" width="160" height="70" xlink:href="ICON_BAR" />
 	 <image x="530" y="15" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="600" y="10" width="120" height="80" xlink:href="PRECIPER"/>
-	 <image x="640" y="90" width="30" height="30" xlink:href="assets/RainDrops.png"/>
+	 <image x="610" y="80" width="30" height="30" xlink:href="__PARCIP_TYPE_ICON__"/>
 	 <image x="700" y="10" width="60" height="60" xlink:href="INTENSITY"/>
 
   </g>
