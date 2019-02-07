@@ -12,16 +12,19 @@
 <text font-size="20px" y="540" x="10" text-anchor="start" >H</text>
 <image x="35" y="510" width="320" height="30" xlink:href="humid-script-output.png" />
 <text font-size="20px" y="500" x="10" text-anchor="start" >P</text>
-<image x="35" y="470" width="320" height="30" xlink:href="percip-script-output.png" />
-<text font-size="20px" y="460" x="10" text-anchor="start" >T</text>
-<image x="35" y="430" width="320" height="30" xlink:href="temp-script-output.png" />
+<image x="35" y="470" width="320" height="30" xlink:href="intensity-script-output.png" />
+<text font-size="20px" y="460" x="10" text-anchor="start" >I</text>
+<image x="35" y="430" width="320" height="30" xlink:href="percip-script-output.png" />
+<text font-size="20px" y="420" x="10" text-anchor="start" >T</text>
+<image x="35" y="390" width="320" height="30" xlink:href="temp-script-output.png" />
 <title>Weather</title>
   <g font-family="DejaVu Sans" id="weather">
   <!--
    <text font-size="15px" y="415" x="735" text-anchor="start" id="svg_167">UNIT</text>
    <text font-size="65" y="50" x="5" text-anchor="start" id="svg_276">CITY</text>
-   -->
    <text font-size="40px" y="420" x="200" text-anchor="middle" id="svg_25">STATUS</text>
+   -->
+   <text font-size="40px" y="380" x="200" text-anchor="middle" id="svg_25">STATUS</text>
 
 
 <!--

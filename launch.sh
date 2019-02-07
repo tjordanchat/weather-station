@@ -20,6 +20,7 @@ MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase)
 ./generate_sunrise.sh
 ./generate_humid_line.sh
 ./generate_wind_line.sh
+./generate_intensity_line.sh
 #./calc_moonrise.sh
 sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
 '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
