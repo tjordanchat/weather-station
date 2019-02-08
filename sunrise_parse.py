@@ -55,13 +55,22 @@ set_sec=(soffset+mset_hour)*60*60+(mset_minute*60)
 moonrise_angle=360*( rise_sec % secPer24Hours)/secPer24Hours-90
 moonset_angle=(360*( set_sec % secPer24Hours )/secPer24Hours)-90
 
-moonrise_arc=describeArc(100, 100, 110, moonrise_angle, moonset_angle)
+moon_arc_rotation=(moonrise_angle+moonset_angle)/2
 
-output = output.replace('MOONRISE_ARC', str(moonrise_arc))
-
-offset=10
+radius=90
+offset=20
 width=12
 height=15
+
+moonrise_x2=int(math.cos(math.radians(float(moonrise_angle)))*radius)+radius
+moonrise_y2=int(math.sin(math.radians(float(moonrise_angle)))*radius)+radius
+moonset_x2=int(math.cos(math.radians(float(moonset_angle)))*radius)+radius
+moonset_y2=int(math.sin(math.radians(float(moonset_angle)))*radius)+radius
+
+moonrise_arc=describeArc(100, 100, 110, moonrise_angle, moonset_angle)
+#moonrise_arc="M 0 100 A 100 100 "+str(moon_arc_rotation)+" 0 1 "+str(moonset_x2)+" "+str(moonset_y2)
+
+output = output.replace('MOONRISE_ARC', str(moonrise_arc))
 
 output = output.replace('WIDTH', str(width))
 output = output.replace('HEIGHT', str(height))
@@ -75,14 +84,12 @@ sunset_epoc = datetime.datetime.fromtimestamp(sunsetTime)
 sunrise_sec=int(sunrise_epoc.strftime('%H'))*60*60+ int(sunrise_epoc.strftime('%M'))*60
 sunset_sec=int(sunset_epoc.strftime('%H'))*60*60+ int(sunset_epoc.strftime('%M'))*60
 
-secPer24Hours = 60*60*24;
 sunrise_angle = (360*( sunrise_sec % secPer24Hours )/secPer24Hours)+90
 sunset_angle = (360*( sunset_sec % secPer24Hours )/secPer24Hours)+90
 
-radius=100
-sunrise_x2=int(math.cos(math.radians(float(sunrise_angle)))*radius)+radius
+sunrise_x2=int(math.cos(math.radians(float(sunrise_angle)))*radius)+radius+offset
 sunrise_y2=int(math.sin(math.radians(float(sunrise_angle)))*radius)+radius
-sunset_x2=int(math.cos(math.radians(float(sunset_angle)))*radius)+radius
+sunset_x2=int(math.cos(math.radians(float(sunset_angle)))*radius)+radius+offset
 sunset_y2=int(math.sin(math.radians(float(sunset_angle)))*radius)+radius
 
 output = output.replace('SUNRISE_X2', str(sunrise_x2))
