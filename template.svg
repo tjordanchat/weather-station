@@ -34,8 +34,11 @@
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 	 <image x="330" y="155" width="50" height="50" xlink:href="UPDOWN" />
    <text font-size="130px" y="260" x="480" text-anchor="middle" id="svg_6">HIGH_ONE°</text>
-   <text font-size="70px" y="220" x="650" text-anchor="middle" id="svg_6">PRECIP_TXT</text>
-	 <image x="710" y="160" width="60" height="60" xlink:href="assets/umbrella.jpg" />
+   <text font-size="50px" y="230" x="645" text-anchor="middle" id="svg_6">100%</text>
+   <!--
+   <text font-size="50px" y="230" x="650" text-anchor="middle" id="svg_6">PRECIP_TXT%</text>
+   -->
+	 <image x="710" y="160" width="60" height="60" xlink:href="__PARCIP_TYPE_ICON__" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <text fill="black" font-size="60px" y="450" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_02</text>
    <text fill="black" font-size="60px" y="450" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_02</text>
@@ -103,7 +106,7 @@
 	 <image x="360" y="15" width="160" height="70" xlink:href="ICON_BAR" />
 	 <image x="530" y="15" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="600" y="10" width="120" height="80" xlink:href="PRECIPER"/>
-	 <image x="610" y="80" width="30" height="30" xlink:href="__PARCIP_TYPE_ICON__"/>
+<!-- <image x="610" y="80" width="30" height="30" xlink:href="__PARCIP_TYPE_ICON__"/> -->
 	 <image x="700" y="10" width="60" height="60" xlink:href="INTENSITY"/>
 
   </g>

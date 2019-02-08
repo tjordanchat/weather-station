@@ -130,7 +130,7 @@ output = output.replace('CLOUD_COV_ICON',cloud_cov_icon)
 
 
 precip=0.0
-for x in range(4):
+for x in range(0):
     i=float(data["hourly"]["data"][x]["precipProbability"])
     if i > precip:
        precip=i
