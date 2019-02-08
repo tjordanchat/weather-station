@@ -181,6 +181,28 @@ else:
 	parcip_type_icon="assets/umbrella.jpg"
 output = output.replace('__PARCIP_TYPE_ICON__',parcip_type_icon)
 
+visibility=data["currently"]["visibility"]
+if visibility >= 10:
+	visibility_icon="assets/VISIBILITY_0.jpg"
+elif visibility >= 9:
+	visibility_icon="assets/VISIBILITY_1.jpg"
+elif visibility >= 8:
+	visibility_icon="assets/VISIBILITY_2.jpg"
+elif visibility >= 7:
+	visibility_icon="assets/VISIBILITY_3.jpg"
+elif visibility >= 6:
+	visibility_icon="assets/VISIBILITY_4.jpg"
+elif visibility >= 5:
+	visibility_icon="assets/VISIBILITY_5.jpg"
+elif visibility >= 4:
+	visibility_icon="assets/VISIBILITY_6.jpg"
+elif visibility >= 3:
+	visibility_icon="assets/VISIBILITY_7.jpg"
+elif visibility >= 2:
+	visibility_icon="assets/VISIBILITY_8.jpg"
+else:
+	visibility_icon="assets/VISIBILITY_9.jpg"
+output = output.replace('__VISIBILITY_MARK__',visibility_icon)
 
 now=data["currently"]["time"]
 concisedate= datetime.datetime.fromtimestamp(now).strftime('%b %d')
