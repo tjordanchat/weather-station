@@ -32,7 +32,7 @@ for x in range(0, 24):
     elif rain_intens > 0.1:
         intensity=".50"
     elif rain_intens > 0:
-        intensity=".25"
+        intensity=".20"
     else:
         intensity="0"
 

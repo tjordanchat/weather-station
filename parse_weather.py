@@ -135,6 +135,8 @@ for x in range(0):
     if i > precip:
        precip=i
 
+precip=data["currently"]["precipProbability"]
+
 if precip > .87:
   rain="100"
 elif precip > .7:
@@ -176,7 +178,7 @@ elif parcip_type == "hail":
 elif parcip_type == "sleet":
 	parcip_type_icon="assets/Sleet.png"
 else:
-	parcip_type_icon="assets/INTEN_NA.jpg"
+	parcip_type_icon="assets/umbrella.jpg"
 output = output.replace('__PARCIP_TYPE_ICON__',parcip_type_icon)
 
 
