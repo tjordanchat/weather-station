@@ -83,6 +83,7 @@
 <!-- EXPERIMENTAL -->
 
 
+   <line x1="360" y1="110" x2="520" y2="110" style="stroke:rgb(0,0,0);stroke-width:2" />
 	 <!--
    <line x1="390" y1="395" x2="765" y2="395" style="stroke:rgb(0,0,0);stroke-width:4" />
 	 <image x="ANCHOR_150" y="110" width="70" height="66" xlink:href="assets/wind_icon.png" />
