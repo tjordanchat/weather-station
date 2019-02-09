@@ -196,9 +196,9 @@ elif visibility >= 5:
 	visibility_icon="assets/VISIBILITY_5.jpg"
 elif visibility >= 4:
 	visibility_icon="assets/VISIBILITY_6.jpg"
-elif visibility >= 3:
-	visibility_icon="assets/VISIBILITY_7.jpg"
 elif visibility >= 2:
+	visibility_icon="assets/VISIBILITY_7.jpg"
+elif visibility >= .5:
 	visibility_icon="assets/VISIBILITY_8.jpg"
 else:
 	visibility_icon="assets/VISIBILITY_9.jpg"
