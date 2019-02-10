@@ -49,16 +49,25 @@ with open('AP.json') as g:
     ap = json.load(g)
 
 
+# Open SVG to process
+output = codecs.open('template.svg', 'r', encoding='utf-8').read()
+
 feels_like=int(data["currently"]["apparentTemperature"])
 
 wind_degree=ap["current"]["wind_degree"]
 wind_dir_url="assets/W_IND_"+getCardinal(wind_degree)+".jpg"
 
-image = ap["current"]["condition"]["code"]
-image_url = 'assets/' + str(image) + '.png'
+status=ap["current"]["condition"]["text"] 
+output = output.replace('STATUS',status) 
 
-# Open SVG to process
-output = codecs.open('template.svg', 'r', encoding='utf-8').read()
+image = ap["current"]["condition"]["code"]
+if int(image) == 1000:
+	if status == "Sunny":
+		image = 36
+	else:
+		image = 1000
+image_url = 'assets/' + str(image) + '.png'
+output = output.replace('ICON_ONE',image_url)
 
 # Do calculations
 pressure=data["currently"]["pressure"]
@@ -221,11 +230,8 @@ else:
    output = output.replace('HUPDOWN','assets/UP.jpg')
 
 output = output.replace('HUMID',str(int(humidity)))
-output = output.replace('ICON_ONE',image_url)
 temp=int(data["currently"]["temperature"])
 output = output.replace('HIGH_ONE',str(int(temp)))  
-status=ap["current"]["condition"]["text"] 
-output = output.replace('STATUS',status) 
 speed=int(ap["current"]["wind_mph"]) 
 output = output.replace('SPEED',str(int(round(float(speed))))) 
 
