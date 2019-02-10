@@ -245,10 +245,10 @@ output = output.replace('UPDOWN',updown)
 
 # FORECAST 
 
-output = output.replace('ICON_01', 'assets/' + str(ap["forecast"]["forecastday"][1]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_02', 'assets/' + str(ap["forecast"]["forecastday"][2]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_03', 'assets/' + str(ap["forecast"]["forecastday"][3]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_04', 'assets/' + str(ap["forecast"]["forecastday"][4]["day"]["condition"]["code"]) + '.png')
+output = output.replace('ICON_01', 'assets/' + str(ap["forecast"]["forecastday"][0]["day"]["condition"]["code"]) + '.png') 
+output = output.replace('ICON_02', 'assets/' + str(ap["forecast"]["forecastday"][1]["day"]["condition"]["code"]) + '.png') 
+output = output.replace('ICON_03', 'assets/' + str(ap["forecast"]["forecastday"][2]["day"]["condition"]["code"]) + '.png') 
+output = output.replace('ICON_04', 'assets/' + str(ap["forecast"]["forecastday"][3]["day"]["condition"]["code"]) + '.png')
 
 uvIndex=data["currently"]["uvIndex"]
 output = output.replace('UVINDEX', str(uvIndex))
