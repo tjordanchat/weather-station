@@ -39,17 +39,20 @@
    -->
 	 <image x="715" y="180" width="60" height="60" xlink:href="__PARCIP_TYPE_ICON__" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
-   <text fill="black" font-size="60px" y="450" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_02</text>
-   <text fill="black" font-size="60px" y="450" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_02</text>
-	 <image x="710" y="385" width="80" height="80" xlink:href="ICON_02" />
+   <text fill="black" font-size="60px" y="430" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_02</text>
+   <text fill="black" font-size="60px" y="430" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_02</text>
+	 <image x="710" y="365" width="80" height="80" xlink:href="ICON_02" />
+	 <!--
+	 <image x="690" y="345" width="120" height="120" xlink:href="assets/climacons-master/SVG/Sun.svg" />
+	 -->
 
-   <text fill="black" font-size="60px" y="520" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_03</text>
-   <text fill="black" font-size="60px" y="520" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_03</text>
-	 <image x="710" y="455" width="80" height="80" xlink:href="ICON_03" />
+   <text fill="black" font-size="60px" y="500" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_03</text>
+   <text fill="black" font-size="60px" y="500" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_03</text>
+	 <image x="710" y="445" width="80" height="80" xlink:href="ICON_03" />
 
-   <text fill="black" font-size="60px" y="590" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_04</text>
-   <text fill="black" font-size="60px" y="590" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_04</text>
-	 <image x="710" y="530" width="80" height="80" xlink:href="ICON_04" />
+   <text fill="black" font-size="60px" y="580" x="415" text-anchor="start" id="svg_8">FORECAST_DAY_04</text>
+   <text fill="black" font-size="60px" y="580" x="545" text-anchor="start" id="svg_8">FORECAST_HILO_04</text>
+	 <image x="710" y="520" width="80" height="80" xlink:href="ICON_04" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 
@@ -72,7 +75,7 @@
 
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
-	 <image x="345" y="390" width="70" height="200" xlink:href="DEW_POINT_ICON" />
+	 <image x="345" y="370" width="70" height="220" xlink:href="DEW_POINT_ICON" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <text fill="black" font-size="70px" y="340" x="360" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
 	 <image x="595" y="260" width="30" height="30" xlink:href="HUPDOWN" />
