@@ -107,7 +107,7 @@
 	 <image x="244" y="-4" width="650" height="650" xlink:href="draw_arc_partial.png" />
 	 -->
 	 <image x="360" y="15" width="160" height="70" xlink:href="ICON_BAR" />
-	 <image x="360" y="85" width="160" height="20" xlink:href="__VISIBILITY_MARK__" />
+	 <image x="380" y="85" width="140" height="20" xlink:href="__VISIBILITY_MARK__" />
 	 <image x="530" y="15" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="600" y="10" width="120" height="80" xlink:href="PRECIPER"/>
 <!-- <image x="610" y="80" width="30" height="30" xlink:href="__PARCIP_TYPE_ICON__"/> -->
