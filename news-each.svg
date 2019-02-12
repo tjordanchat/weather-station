@@ -1,0 +1,38 @@
+<svg width="800" height="600">
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+<script>
+  d3plus.textwrap()
+    .container(d3.select("#rectWrap"))
+    .draw();
+</script>
+
+<style>
+
+  svg {
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 425px;
+    margin: 25px;
+    width: 900px;
+  }
+
+  .type {
+    fill: #888;
+    text-anchor: middle;
+  }
+
+  .shape {
+    fill: #eee;
+    stroke: #ccc;
+  }
+
+</style>
+
+
+  <!-- Text that will use the D3plus default wrapping. -->
+  <text id="rectWrap" class="wrap" y="50px" font-size="50">
+    __NEWS_TITLE__
+  </text>
+</svg>
+
+

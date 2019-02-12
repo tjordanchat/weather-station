@@ -18,6 +18,7 @@ MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase)
 rm -f namfntsfcwbg.gif
 wget https://www.wpc.ncep.noaa.gov/sfc/namfntsfcwbg.gif
 rm -f ECVS.JPG
+rm -f ./news/*
 wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 ./generate_percip_line.sh
 ./generate_temp_line.sh
@@ -26,7 +27,12 @@ wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 ./generate_wind_line.sh
 ./generate_intensity_line.sh
 ./newsapi.sh
-python news.py
+python news-each.py
+ls news/news-processed_*.svg | while read t
+do
+  echo /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 $t ${t%.*}.png
+  /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 $t ${t%.*}.png
+done
 #./calc_moonrise.sh
 sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
 '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
