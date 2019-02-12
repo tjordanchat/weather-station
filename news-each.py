@@ -22,7 +22,7 @@ for j in range(num_items):
   sl=len(story[j])
   paragraph=""
   index=0
-  max=30
+  max=18
   om=0
   for k in range(sl):
     if story[j][k] == ' ':
@@ -30,9 +30,9 @@ for j in range(num_items):
         mark=k
       else:
         if index == 0:
-           paragraph=paragraph+'<tspan x="0" dy="1.2em"> * '+story[j][om:mark]+'</tspan>'
+           paragraph=paragraph+'<tspan x="0" dy="1.2em" text-anchor="start"> * '+story[j][om:mark]+'</tspan>'
         else:
-           paragraph=paragraph+'<tspan x="0" dy="1.2em">'+story[j][om:mark]+'</tspan>'
+           paragraph=paragraph+'<tspan x="0" dy="1.2em" text-anchor="start">'+story[j][om:mark]+'</tspan>'
         om=mark
         index=0
     index=index+1

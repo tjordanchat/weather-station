@@ -30,7 +30,7 @@
 
 
   <!-- Text that will use the D3plus default wrapping. -->
-  <text id="rectWrap" class="wrap" y="50px" font-size="50">
+  <text id="rectWrap" class="wrap" y="50px" font-size="70">
     __NEWS_TITLE__
   </text>
 </svg>
