@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test</title>
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    </head>
+
+    <body>
+        <img id="image" src="foto1.jpg">
+
+        <script type = "text/javascript">
+            var image = document.getElementById("image");
+            var currentPos = 0;
+            var images = ["foto1.jpg", "foto2.jpg", "foto3.jpg"]
+
+            function volgendefoto() {
+                if (++currentPos >= images.length)
+                    currentPos = 0;
+
+                image.src = images[currentPos];
+            }
+
+            setInterval(volgendefoto, 3000);
+        </script>
+    </body>
+</html>
