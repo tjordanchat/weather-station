@@ -1,0 +1,15 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<!--
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+   -->
+<g> 
+<text font-size="70px" y="80" x="10" text-anchor="start" >__NEWS_LINE_0__</text>
+<text font-size="70px" y="160" x="10" text-anchor="start" >__NEWS_LINE_1__</text>
+<text font-size="70px" y="240" x="10" text-anchor="start" >__NEWS_LINE_2__</text>
+<text font-size="70px" y="320" x="10" text-anchor="start" >__NEWS_LINE_3__</text>
+<text font-size="70px" y="400" x="10" text-anchor="start" >__NEWS_LINE_4__</text>
+<text font-size="70px" y="480" x="10" text-anchor="start" >__NEWS_LINE_5__</text>
+<text font-size="70px" y="560" x="10" text-anchor="start" >__NEWS_LINE_6__</text>
+<text font-size="70px" y="640" x="10" text-anchor="start" >__NEWS_LINE_7__</text>
+</g>
+</svg>

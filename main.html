@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>test</title>
-        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <style>
+        	body: { width: 400; height: 300 }
+        </style>
     </head>
 
     <body>
-        <img id="image" src="foto1.jpg">
+        <img id="image" src="weather-script-output.png">
 
         <script type = "text/javascript">
             var image = document.getElementById("image");
             var currentPos = 0;
-            var images = ["foto1.jpg", "foto2.jpg", "foto3.jpg"]
+            var images = ["weather-script-output.png", "news-processed.png"]
 
             function volgendefoto() {
                 if (++currentPos >= images.length)
@@ -21,7 +23,7 @@
                 image.src = images[currentPos];
             }
 
-            setInterval(volgendefoto, 3000);
+            setInterval(volgendefoto, 10000);
         </script>
     </body>
 </html>
