@@ -26,7 +26,7 @@ for j in range(num_items):
   sl=len(story[j])
   paragraph=""
   index=0
-  max=22
+  max=20
   om=0
   for k in range(sl):
     if story[j][k] == ' ':
