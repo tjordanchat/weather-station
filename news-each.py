@@ -18,11 +18,15 @@ story=["" for i in range(num_items)]
 out=["" for i in range(num_items)]
 for j in range(num_items):
   out[j] = codecs.open('news-each.svg', 'r', encoding='utf-8').read()
-  story[j]=news["articles"][j]["description"] 
+  t=news["articles"][j]["description"] 
+  if t == None:
+    story[j]=(news["articles"][j]["title"]).replace('\\','')
+  else:
+    story[j]=(news["articles"][j]["description"]).replace('\\','')
   sl=len(story[j])
   paragraph=""
   index=0
-  max=18
+  max=22
   om=0
   for k in range(sl):
     if story[j][k] == ' ':

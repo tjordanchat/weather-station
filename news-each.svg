@@ -11,9 +11,9 @@
 
   svg {
     font-family: "Helvetica", "Arial", sans-serif;
-    height: 425px;
-    margin: 25px;
-    width: 900px;
+    height: 600;
+    margin: 0px;
+    width: 800px;
   }
 
   .type {
@@ -30,7 +30,7 @@
 
 
   <!-- Text that will use the D3plus default wrapping. -->
-  <text id="rectWrap" class="wrap" y="50px" font-size="70">
+  <text id="rectWrap" class="wrap" y="50px" font="Courier" font-size="70">
     __NEWS_TITLE__
   </text>
 </svg>
