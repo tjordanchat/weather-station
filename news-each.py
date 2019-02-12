@@ -14,14 +14,29 @@ with open('news.json') as f:
     news = json.load(f)
   
 num_items=len(news["articles"])
-print(num_items)
 story=["" for i in range(num_items)]
 out=["" for i in range(num_items)]
 for j in range(num_items):
-  print(j)
-  story[j]=news["articles"][j]["title"] 
   out[j] = codecs.open('news-each.svg', 'r', encoding='utf-8').read()
-  out[j] = out[j].replace('__NEWS_TITLE__',story[j])
+  story[j]=news["articles"][j]["description"] 
+  sl=len(story[j])
+  paragraph=""
+  index=0
+  max=30
+  om=0
+  for k in range(sl):
+    if story[j][k] == ' ':
+      if index < max:
+        mark=k
+      else:
+        if index == 0:
+           paragraph=paragraph+'<tspan x="0" dy="1.2em"> * '+story[j][om:mark]+'</tspan>'
+        else:
+           paragraph=paragraph+'<tspan x="0" dy="1.2em">'+story[j][om:mark]+'</tspan>'
+        om=mark
+        index=0
+    index=index+1
+  out[j] = out[j].replace('__NEWS_TITLE__',paragraph)
   codecs.open('news/news-processed_'+str(j)+'.svg', 'w', encoding='utf-8').write(out[j])
 
 f.close()

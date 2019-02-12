@@ -19,6 +19,14 @@
             var images = ["weather-script-output.png",
                           "news/news-processed_0.png", 
                           "news/news-processed_1.png", 
+                          "news/news-processed_2.png", 
+                          "news/news-processed_3.png", 
+                          "news/news-processed_4.png", 
+                          "news/news-processed_5.png", 
+                          "news/news-processed_6.png", 
+                          "news/news-processed_7.png", 
+                          "news/news-processed_8.png", 
+                          "news/news-processed_9.png",
                           "news/news-processed_10.png", 
                           "news/news-processed_11.png", 
                           "news/news-processed_12.png", 
@@ -28,15 +36,7 @@
                           "news/news-processed_16.png", 
                           "news/news-processed_17.png", 
                           "news/news-processed_18.png", 
-                          "news/news-processed_19.png", 
-                          "news/news-processed_2.png", 
-                          "news/news-processed_3.png", 
-                          "news/news-processed_4.png", 
-                          "news/news-processed_5.png", 
-                          "news/news-processed_6.png", 
-                          "news/news-processed_7.png", 
-                          "news/news-processed_8.png", 
-                          "news/news-processed_9.png"]
+                          "news/news-processed_19.png"]
 
             function volgendefoto() {
                 if (++currentPos >= images.length)
@@ -45,7 +45,7 @@
                 image.src = images[currentPos];
             }
 
-            setInterval(volgendefoto, 5000);
+            setInterval(volgendefoto, 10000);
         </script>
     </body>
 </html>

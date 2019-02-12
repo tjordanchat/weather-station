@@ -41,7 +41,6 @@ sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
 python parse_weather.py
 
 #convert svg to png, and rotate 90 degrees for horizontal view
-/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 news-processed.svg news-processed.png
 /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
 /usr/local/bin/convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
 /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
