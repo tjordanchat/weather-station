@@ -18,7 +18,7 @@ MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase)
 rm -f namfntsfcwbg.gif
 wget https://www.wpc.ncep.noaa.gov/sfc/namfntsfcwbg.gif
 rm -f ECVS.JPG
-rm -f ./news/*
+#rm -f ./news/*
 wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 ./generate_percip_line.sh
 ./generate_temp_line.sh
@@ -30,6 +30,7 @@ wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 python news-each.py
 ls news/news-processed_*.svg | while read t
 do
+  echo '=================> ' $t
   echo /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 $t ${t%.*}.png
   /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 $t ${t%.*}.png
 done
