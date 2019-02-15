@@ -22,13 +22,13 @@ for j in range(num_items):
   out[j] = codecs.open('news-each.svg', 'r', encoding='utf-8').read()
   t=news["articles"][j]["description"] 
   if t == None:
-    story[j]=(news["articles"][j]["title"]).replace('\\','')
+    story[j]=(news["articles"][j]["title"])
   else:
-    story[j]=(news["articles"][j]["description"]).replace('\\','')
+    story[j]=(news["articles"][j]["description"])
   sl=int(len(story[j]))
   paragraph=""
   index=0
-  max=24
+  max=20
   om=0
   pi=0
   for k in range(sl):
@@ -41,6 +41,7 @@ for j in range(num_items):
            st=st.replace("\\","")
            st=st.replace("\"","'")
            s = cgi.escape(st)
+           print(s)
            paragraph=paragraph+'<tspan font="Courier"  x="0" dy="1.2em" text-anchor="start">'+s+'</tspan>'
            index=1
         else:
