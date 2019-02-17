@@ -26,13 +26,15 @@ for j in range(num_items):
   else:
     story[j]=(news["articles"][j]["description"])
   sl=int(len(story[j]))
+  if sl < 40:
+    story[j]=(news["articles"][j]["content"])
   paragraph=""
   index=0
   max=20
   om=0
   pi=0
   for k in range(sl):
-    if story[j][k] == ' ':
+    if story[j][k].isspace():
       if pi < max:
         mark=k+1
       else:
