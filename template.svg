@@ -83,7 +83,7 @@
    <text fill="black" font-size="70px" y="340" x="360" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
 	 <image x="595" y="260" width="30" height="30" xlink:href="HUPDOWN" />
    <text font-size="70px" y="320" x="660" text-anchor="middle" id="svg_6">HUMID</text>
-	 <image x="700" y="270" width="50" height="50" xlink:href="assets/humidity.png" />
+	 <image x="715" y="270" width="50" height="50" xlink:href="assets/humidity.png" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
 
 <!-- EXPERIMENTAL -->
