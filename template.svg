@@ -74,11 +74,11 @@
 <!--
 	 <image x="165" y="500" width="100" height="100" xlink:href="ICON_01" />
 	 -->
-   <text fill="black" font-size="30px" x="10" y="345" text-anchor="start" id="svg_8">HOUR</text>
+   <text fill="black" font-size="40px" x="10" y="340" text-anchor="start" id="svg_8">HOUR</text>
 
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
-	 <image x="345" y="378" width="70" height="220" xlink:href="DEW_POINT_ICON" />
+	 <image x="345" y="390" width="70" height="210" xlink:href="DEW_POINT_ICON" />
    <!-- OOOOOOOOOOOOOOOOOOOOOOO -->
    <text fill="black" font-size="70px" y="340" x="360" text-anchor="start" id="svg_8">FORECAST_HILO_01</text>
 	 <image x="595" y="260" width="30" height="30" xlink:href="HUPDOWN" />
@@ -89,7 +89,6 @@
 <!-- EXPERIMENTAL -->
 
 
-   <line x1="360" y1="108" x2="520" y2="108" style="stroke:rgb(0,0,0);stroke-width:8" />
 	 <!--
    <line x1="390" y1="395" x2="765" y2="395" style="stroke:rgb(0,0,0);stroke-width:4" />
 	 <image x="ANCHOR_150" y="110" width="70" height="66" xlink:href="assets/wind_icon.png" />
@@ -110,7 +109,8 @@
 	 <image x="244" y="-4" width="650" height="650" xlink:href="draw_arc_partial.png" />
 	 -->
 	 <image x="360" y="15" width="160" height="70" xlink:href="ICON_BAR" />
-	 <image x="380" y="85" width="140" height="20" xlink:href="__VISIBILITY_MARK__" />
+	 <image x="380" y="83" width="140" height="20" xlink:href="__VISIBILITY_MARK__" />
+   <line x1="360" y1="103" x2="520" y2="103" style="stroke:rgb(0,0,0);stroke-width:8" />
 	 <image x="530" y="15" width="70" height="70" xlink:href="CLOUD_COV_ICON" />
 	 <image x="600" y="10" width="120" height="80" xlink:href="PRECIPER"/>
 <!-- <image x="610" y="80" width="30" height="30" xlink:href="__PARCIP_TYPE_ICON__"/> -->
