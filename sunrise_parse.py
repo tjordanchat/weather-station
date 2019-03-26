@@ -91,13 +91,16 @@ sunset_epoc = datetime.datetime.fromtimestamp(sunsetTime)
 sunrise_sec=int(sunrise_epoc.strftime('%H'))*60*60+ int(sunrise_epoc.strftime('%M'))*60
 sunset_sec=int(sunset_epoc.strftime('%H'))*60*60+ int(sunset_epoc.strftime('%M'))*60
 
-sunrise_angle = (360*( sunrise_sec % secPer24Hours )/secPer24Hours)+90
-sunset_angle = (360*( sunset_sec % secPer24Hours )/secPer24Hours)+90
+sunrise_angle = ((360*( sunrise_sec % secPer24Hours )/secPer24Hours)+90)%360
+sunset_angle = ((360*( sunset_sec % secPer24Hours )/secPer24Hours)+90)%360
+
+print("Sunrise: "+str(sunrise_angle))
+print("Sunset: "+str(sunset_angle))
 
 sunrise_x2=int(math.cos(math.radians(float(sunrise_angle)))*radius)+radius+offset
-sunrise_y2=int(math.sin(math.radians(float(sunrise_angle)))*radius)+radius
+sunrise_y2=int(math.sin(math.radians(float(sunrise_angle)))*radius)+radius+offset
 sunset_x2=int(math.cos(math.radians(float(sunset_angle)))*radius)+radius+offset
-sunset_y2=int(math.sin(math.radians(float(sunset_angle)))*radius)+radius
+sunset_y2=int(math.sin(math.radians(float(sunset_angle)))*radius)+radius+offset
 
 output = output.replace('SUNRISE_X2', str(sunrise_x2))
 output = output.replace('SUNRISE_Y2', str(sunrise_y2))
