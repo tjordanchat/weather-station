@@ -30,13 +30,13 @@ output = codecs.open('svg_sun_up.svg', 'r', encoding='utf-8').read()
 # ALL WORK DONE BELOW -->
 moonrise= ap["forecast"]["forecastday"][0]["astro"]["moonrise"]
 moonset=ap["forecast"]["forecastday"][0]["astro"]["moonset"]
-local_time=ap["forecast"]["forecastday"][0]["astro"]["moonset"]
+local_time=ap["location"]["localtime"]
 
 secPer24Hours=60*60*24
 
 mrise_array=moonrise.replace(":"," ")
 mset_array=moonset.replace(":"," ")
-time_array=local_time(":"," ")
+time_array=local_time.replace(":"," ")
 
 mrise_tokens = mrise_array.split()
 mset_tokens = mset_array.split()
@@ -70,7 +70,7 @@ print("Moonset: "+str(moonset_angle))
 moon_arc_rotation=(moonrise_angle+moonset_angle)/2
 
 radius=90
-dot_radius=80
+dot_radius=90
 offset=20
 width=12
 height=15
