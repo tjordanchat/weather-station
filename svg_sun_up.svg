@@ -2,6 +2,7 @@
   <!-- center of rotation -->
   <circle cx="110" cy="110" r="90" style="fill: transparent;" stroke-width="20"/>
   <circle cx="110" cy="110" r="10" stroke="black" stroke-width="10" fill="none" />
+  <circle cx="TIME_X2" cy="TIME_Y2" r="10" stroke="black" stroke-width="10" fill="none" />
 
   <!-- non-rotated arrow -->
   <g id="arrow" style="stroke: black;">
