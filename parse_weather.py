@@ -251,6 +251,8 @@ output = output.replace('ICON_03', 'assets/' + str(ap["forecast"]["forecastday"]
 output = output.replace('ICON_04', 'assets/' + str(ap["forecast"]["forecastday"][3]["day"]["condition"]["code"]) + '.png')
 
 uvIndex=data["currently"]["uvIndex"]
+if uvIndex == 10:
+    uvIndex='X'
 output = output.replace('UVINDEX', str(uvIndex))
 
 date_epoch=ap["forecast"]["forecastday"][1]["date_epoch"] 
