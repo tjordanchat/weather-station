@@ -45,27 +45,19 @@ def getCardinal(angle):
 with open('DS.json') as f:
     data = json.load(f)
 
-with open('AP.json') as g:
-    ap = json.load(g)
-
-
 # Open SVG to process
 output = codecs.open('template.svg', 'r', encoding='utf-8').read()
 
 feels_like=int(data["currently"]["apparentTemperature"])
 
-wind_degree=ap["current"]["wind_degree"]
+wind_degree=int(data["currently"]["windBearing"])
 wind_dir_url="assets/W_IND_"+getCardinal(wind_degree)+".jpg"
 
-status=ap["current"]["condition"]["text"] 
+status=data["currently"]["summary"] 
 output = output.replace('STATUS',status) 
 
-image = ap["current"]["condition"]["code"]
-if int(image) == 1000:
-	if status == "Sunny":
-		image = 36
-	else:
-		image = 1000
+#need to map icons
+image = data["currently"]["icon"]
 image_url = 'assets/' + str(image) + '.png'
 output = output.replace('ICON_ONE',image_url)
 
@@ -163,8 +155,7 @@ output = output.replace('PRECIP_TXT',str(int(precip*100)))
 
 # Insert icons and temperatures
 
-#summary=ap["current"]["condition"]["text"]
-summary=data["daily"]["data"][0]["summary"]
+summary=data["hourly"]["summary"]
 output = output.replace('SUMMARY',summary)
 wind=str(int(data["currently"]["windSpeed"]+.5))
 
@@ -221,8 +212,8 @@ output = output.replace('HOUR', concisetime)
 
 output = output.replace('CITY',"New York")
 
-fhumid=data["hourly"]["data"][2]["humidity"]
-humidity=ap["current"]["humidity"]
+fhumid=int(float(data["hourly"]["data"][4]["humidity"])*100)
+humidity=int(float(data["currently"]["humidity"])*100)
 
 if humidity > fhumid:
    output = output.replace('HUPDOWN','assets/DOWN.jpg')
@@ -232,7 +223,7 @@ else:
 output = output.replace('HUMID',str(int(humidity)))
 temp=int(data["currently"]["temperature"])
 output = output.replace('HIGH_ONE',str(int(temp)))  
-speed=int(ap["current"]["wind_mph"]) 
+speed=int(data["currently"]["windSpeed"]) 
 output = output.replace('SPEED',str(int(round(float(speed))))) 
 
 ftemp=data["hourly"]["data"][2]["temperature"]
@@ -245,38 +236,38 @@ output = output.replace('UPDOWN',updown)
 
 # FORECAST 
 
-output = output.replace('ICON_01', 'assets/' + str(ap["forecast"]["forecastday"][0]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_02', 'assets/' + str(ap["forecast"]["forecastday"][1]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_03', 'assets/' + str(ap["forecast"]["forecastday"][2]["day"]["condition"]["code"]) + '.png') 
-output = output.replace('ICON_04', 'assets/' + str(ap["forecast"]["forecastday"][3]["day"]["condition"]["code"]) + '.png')
+output = output.replace('ICON_01', 'assets/' + str(data["daily"]["data"][0]["icon"]) + '.png') 
+output = output.replace('ICON_02', 'assets/' + str(data["daily"]["data"][1]["icon"]) + '.png') 
+output = output.replace('ICON_03', 'assets/' + str(data["daily"]["data"][2]["icon"]) + '.png') 
+output = output.replace('ICON_04', 'assets/' + str(data["daily"]["data"][3]["icon"]) + '.png')
 
 uvIndex=data["currently"]["uvIndex"]
 if uvIndex == 10:
     uvIndex='X'
 output = output.replace('UVINDEX', str(uvIndex))
 
-date_epoch=ap["forecast"]["forecastday"][1]["date_epoch"] 
+date_epoch=data["daily"]["data"][0]["time"] 
 concise_day= datetime.datetime.fromtimestamp(date_epoch).strftime('%a')
 output = output.replace('FORECAST_DAY_01', concise_day)
 high=str(int(data["daily"]["data"][0]["temperatureHigh"]))
 low=str(int(data["daily"]["data"][0]["temperatureLow"]))
 output = output.replace('FORECAST_HILO_01', high +'/' + low)
 
-date_epoch=ap["forecast"]["forecastday"][2]["date_epoch"] 
+date_epoch=data["daily"]["data"][1]["time"] 
 concise_day= datetime.datetime.fromtimestamp(date_epoch).strftime('%a')
 high=str(int(data["daily"]["data"][1]["temperatureHigh"]))
 low=str(int(data["daily"]["data"][1]["temperatureLow"]))
 output = output.replace('FORECAST_DAY_02', concise_day)
 output = output.replace('FORECAST_HILO_02', high +'/' + low)
 
-date_epoch=ap["forecast"]["forecastday"][3]["date_epoch"] 
+date_epoch=data["daily"]["data"][2]["time"] 
 concise_day= datetime.datetime.fromtimestamp(date_epoch).strftime('%a')
 high=str(int(data["daily"]["data"][2]["temperatureHigh"]))
 low=str(int(data["daily"]["data"][2]["temperatureLow"]))
 output = output.replace('FORECAST_DAY_03', concise_day)
 output = output.replace('FORECAST_HILO_03', high +'/' + low)
 
-date_epoch=ap["forecast"]["forecastday"][4]["date_epoch"] 
+date_epoch=data["daily"]["data"][3]["time"] 
 concise_day= datetime.datetime.fromtimestamp(date_epoch).strftime('%a')
 high=str(int(data["daily"]["data"][3]["temperatureHigh"]))
 low=str(int(data["daily"]["data"][3]["temperatureLow"]))
@@ -287,4 +278,3 @@ output = output.replace('FORECAST_HILO_04', high +'/' + low) # Write
 codecs.open('weather-processed.svg', 'w', encoding='utf-8').write(output)
 
 f.close()
-g.close()
