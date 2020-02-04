@@ -25,11 +25,12 @@ for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
     rain_intens=data["hourly"]["data"][x]["precipIntensity"]
-    intensity=str(float(rain_intens)/2.0)
+#   intensity=str(float(rain_intens)/2.0)
+    intensity = str(1.062851 + (0.1552727 - 1.062851)/(1 + (float(rain_intens)/0.1608871)**1.030971))
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(intensity))
 """
     if rain_intens > 2:
-       intensity="100"
+       intensity="1.0"
     elif rain_intens > 0.3:
         intensity=".75"
     elif rain_intens > 0.1:
