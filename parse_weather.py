@@ -84,7 +84,7 @@ elif rain_intens > 0.3:
     intensity="HEAVY"
 elif rain_intens > 0.1:
     intensity="MODERATE"
-elif rain_intens > 0:
+elif rain_intens > 0.02:
     intensity="LIGHT"
 else:
     intensity="NA"
