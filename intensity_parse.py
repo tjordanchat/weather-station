@@ -26,7 +26,8 @@ for x in range(0, 24):
     output = output.replace('XX_'+str(x)+"_", xcalc)
     rain_intens=data["hourly"]["data"][x]["precipIntensity"]
 #   intensity=str(float(rain_intens)/2.0)
-    intensity = str(1.062851 + (0.1552727 - 1.062851)/(1 + (float(rain_intens)/0.1608871)**1.030971))
+#   intensity = str( 1.062851 + (0.1552727  - 1.062851)/(1 + (float(rain_intens)/0.1608871)**1.030971))
+    intensity = str( 1.22992 +   (-0.1338664 - 1.22992)/(1 + (float(rain_intens)/0.1430492)**0.6233418))
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(intensity))
 """
     if rain_intens > 2:

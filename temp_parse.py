@@ -25,12 +25,12 @@ for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
     temp_rel=float(data["hourly"]["data"][x]["temperature"])
-    if temp_rel > 90:
+    if temp_rel > 100:
         temp_value = 1
     elif temp_rel < 32:
         temp_value = 0
     else:
-        temp_value=(temp_rel-32)/58
+        temp_value=((temp_rel-32)/58)**2
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(temp_value))
 
 
