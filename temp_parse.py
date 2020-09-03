@@ -30,7 +30,7 @@ for x in range(0, 24):
     elif temp_rel < 32:
         temp_value = 0
     else:
-        temp_value=((temp_rel-32)/58)**2
+        temp_value=((temp_rel-32)/68)**2
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(temp_value))
 
 
