@@ -1,29 +1,29 @@
 <svg width="310" height="20" xmlns="http://www.w3.org/2000/svg">
 <g>
 
-<rect x="XX_0_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_0_" />
-<rect x="XX_1_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_1_" />
-<rect x="XX_2_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_2_" />
-<rect x="XX_3_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_3_" />
-<rect x="XX_4_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_4_" />
-<rect x="XX_5_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_5_" />
-<rect x="XX_6_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_6_" />
-<rect x="XX_7_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_7_" />
-<rect x="XX_8_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_8_" />
-<rect x="XX_9_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_9_" />
-<rect x="XX_10_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_10_" />
-<rect x="XX_11_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_11_" />
-<rect x="XX_12_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_12_" />
-<rect x="XX_13_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_13_" />
-<rect x="XX_14_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_14_" />
-<rect x="XX_15_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_15_" />
-<rect x="XX_16_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_16_" />
-<rect x="XX_17_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_17_" />
-<rect x="XX_18_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_18_" />
-<rect x="XX_19_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_19_" />
-<rect x="XX_20_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_20_" />
-<rect x="XX_21_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_21_" />
-<rect x="XX_22_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_22_" />
-<rect x="XX_23_" y="4" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_23_" />
+<rect x="XX_0_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_0_" />
+<rect x="XX_1_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_1_" />
+<rect x="XX_2_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_2_" />
+<rect x="XX_3_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_3_" />
+<rect x="XX_4_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_4_" />
+<rect x="XX_5_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_5_" />
+<rect x="XX_6_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_6_" />
+<rect x="XX_7_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_7_" />
+<rect x="XX_8_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_8_" />
+<rect x="XX_9_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_9_" />
+<rect x="XX_10_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_10_" />
+<rect x="XX_11_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_11_" />
+<rect x="XX_12_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_12_" />
+<rect x="XX_13_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_13_" />
+<rect x="XX_14_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_14_" />
+<rect x="XX_15_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_15_" />
+<rect x="XX_16_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_16_" />
+<rect x="XX_17_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_17_" />
+<rect x="XX_18_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_18_" />
+<rect x="XX_19_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_19_" />
+<rect x="XX_20_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_20_" />
+<rect x="XX_21_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_21_" />
+<rect x="XX_22_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_22_" />
+<rect x="XX_23_" y="4" stroke="black" width="WIDTH" height="HEIGHT" style="fill:black;fill-opacity:FILL_OPAC_23_" />
 </g>
 </svg>
