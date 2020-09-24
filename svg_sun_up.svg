@@ -1,6 +1,6 @@
 <svg width="220px" height="220px" viewBox="0 0 220 220">
   <!-- center of rotation -->
-  <circle cx="110" cy="110" r="90" style="fill: transparent;" stroke-width="20"/>
+  <circle cx="110" cy="110" r="90" style="fill: transparent;" stroke="black" stroke-width="20"/>
   <circle cx="110" cy="110" r="10" stroke="black" stroke-width="10" fill="none" />
   <circle cx="TIME_X2" cy="TIME_Y2" r="20" stroke="black" stroke-width="10" fill="black" />
 
