@@ -1,19 +1,19 @@
 #!/bin/sh
-set -x
+set -xv
 
 cd "$(dirname "$0")"
 
-DARK_KEY=$(cat pass.yml | /usr/local/bin/yq r - darksky.key)
-DARK_LAT=$(cat pass.yml | /usr/local/bin/yq r - darksky.coord.lat)
-DARK_LONG=$(cat pass.yml | /usr/local/bin/yq r - darksky.coord.long)
-APIX_KEY=$(cat pass.yml | /usr/local/bin/yq r - apixu.key)
-APIX_ZIP=$(cat pass.yml | /usr/local/bin/yq r - apixu.zip)
+DARK_KEY=$(cat pass.yml | /usr/local/bin/yq e .darksky.key -)
+DARK_LAT=$(cat pass.yml | /usr/local/bin/yq e .darksky.coord.lat -)
+DARK_LONG=$(cat pass.yml | /usr/local/bin/yq e .darksky.coord.long -)
+APIX_KEY=$(cat pass.yml | /usr/local/bin/yq e .apixu.key - )
+APIX_ZIP=$(cat pass.yml | /usr/local/bin/yq e .apixu.zip -)
 
 curl https://api.darksky.net/forecast/$DARK_KEY/$DARK_LAT,$DARK_LONG | /usr/local/bin/jq . > DS.json
 
 curl -k "http://api.apixu.com/v1/forecast.json?key=$APIX_KEY&q=$APIX_ZIP&days=5"  | /usr/local/bin/jq . > AP.json
 
-MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase)
+MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase )
 #curl -k https://api.usno.navy.mil/imagery/moon.png > phase.png
 
 rm -f namfntsfcwbg.gif
@@ -30,7 +30,7 @@ wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 ./newsapi.sh
 #./calc_moonrise.sh
 sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
-'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
+#'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
 
 #Parse Weather and replace placeholder text in the svg template file
 python parse_weather.py
