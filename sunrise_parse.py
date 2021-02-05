@@ -38,7 +38,7 @@ time_hour=int(time_tokens[0])
 
 time_minute=int(time_tokens[1])
 
-time_sec=(time_hour)*60*60+(time_minute*60)
+time_sec=(time_hour)*60*60+(time_minute*60)+900
 
 radius=90
 dot_radius=90
