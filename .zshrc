@@ -1,18 +1,15 @@
 # Add the following lines to maven.sh
-export PROMPT_COMMAND='export O=$?;[ ! $O = 0 ] && PS1="Apple:\W:$O> " || PS1="Apple:\W> ";history -a ; printf %s "$PWD" > ~/.       cdrc'
-PS1="Apple:$PWD> "
 export TZ="America/New_York"
 export EDITOR=vim
 export M2_HOME=/opt/apache-maven-3.0.5
 export M2=$M2_HOME/bin
-PATH=$M2:$PATH 
+export PATH=$M2:$PATH 
 export a b c d e f g h i j k l m n o p q r s t u v w x y z
 export NODE_PATH="~/node_modules"
 export CDPATH=".:~"
 export GOROOT="$HOME/go"
 export PATH=~/bin:/bin:/usr/bin:/usr/local/bin:$GOROOT/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export LC_COLLATE=C
-export HISTSIZE=""
 export GREP_OPTIONS='--color=auto'
 export GOROOT="/usr/local/go"
 HISTSIZE=10000000
@@ -21,6 +18,7 @@ SAVEHIST=10000000
 # some aliases
 #alias sfe="sudo srm -zsv"
 
+alias z="vi ~/.zshrc;. ~/.zshrc"
 alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
 alias _="cd $_"
 alias rserv="ruby -run -e httpd . -p"
@@ -111,7 +109,7 @@ alias k7="kill -9 %7"
 alias k8="kill -9 %8"
 alias k9="sudo kill -9"
 alias la='ls -A'
-alias ll='ls -la -G'
+alias ll='ls -lart -G'
 alias l='ls -CFxaG'
 alias m="java mocha.Decompiler"
 alias mn=makensis
@@ -121,7 +119,6 @@ alias .p='. ~/.profile'
 alias p='vi ~/.bash_profile;.p'
 alias pipi="pip install --install-option='--prefix=$HOME/local'"
 alias pipu="pip uninstall"
-alias v='!vi'
 alias vr="vi README*" 
 alias x="chmod +x"
 alias x.='chmod +x \$_'
@@ -144,4 +141,6 @@ title () {
 	echo -n "\033]0;$1\007"
 }
 
-precmd() { DISP=$( echo "$PWD" | sed 's%^.*/\([^/]*$\)%\1%' ); eval "PS1='$DISP> '"
+precmd() { DISP=$( echo "$PWD" | sed 's%^.*/\([^/]*$\)%\1%' ); eval "PS1='$DISP> '" }
+
+v() { history | tac | egrep "vi " | sed -n 1p | zsh }
