@@ -27,6 +27,7 @@ wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
 ./generate_humid_line.sh
 ./generate_wind_line.sh
 ./generate_intensity_line.sh
+./generate_barometer_line.sh
 ./newsapi.sh
 #./calc_moonrise.sh
 sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
