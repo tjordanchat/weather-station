@@ -25,7 +25,7 @@ for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
     temp_rel=float(data["hourly"]["data"][x]["pressure"])
-    bar=float((temp_rel-980)*1.5/100)**2
+    bar=float((temp_rel-980)*1.5/100)**4
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(bar))
 
 
