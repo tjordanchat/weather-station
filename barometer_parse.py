@@ -5,6 +5,15 @@ import datetime
 import codecs
 import json
 from pprint import pprint
+import matplotlib.pyplot as plt
+import numpy as np
+import math, sys
+
+def sig(barp):
+   x = (float(sys.argv[1])-1015) 
+   z = 1-(1/(1 + np.exp(-x)))
+
+   return z
 
 with open('DS.json') as f:
     data = json.load(f)
@@ -25,7 +34,7 @@ for x in range(0, 24):
     xcalc=str(int(offset+(width*x)))
     output = output.replace('XX_'+str(x)+"_", xcalc)
     temp_rel=float(data["hourly"]["data"][x]["pressure"])
-    bar=1.0-float((temp_rel-980)*1.5/100)
+    bar=sig(float(temp_rel))
     output = output.replace('FILL_OPAC_'+str(x)+"_", str(bar))
 
 
