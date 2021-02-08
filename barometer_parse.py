@@ -14,7 +14,7 @@ def sig(barp):
    z = 1-(1/(1 + np.exp(-x)))
    print("z = ",z,"bar = ",barp,"val = ",x)
    
-   return z
+   return 1-(((x/20))+0.5)
 
 with open('DS.json') as f:
     data = json.load(f)
