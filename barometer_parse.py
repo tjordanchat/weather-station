@@ -10,9 +10,10 @@ import numpy as np
 import math, sys
 
 def sig(barp):
-   x = (float(sys.argv[1])-1015) 
+   x = ((float(barp)-950) - 50) / 5
    z = 1-(1/(1 + np.exp(-x)))
-
+   print("z = ",z,"bar = ",barp,"val = ",x)
+   
    return z
 
 with open('DS.json') as f:
