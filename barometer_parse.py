@@ -10,9 +10,9 @@ import numpy as np
 import math, sys
 
 def sig(barp):
-   x = ((float(barp)-990) - 25) / 20
-   z = 1-(1/(1 + np.exp(-(5*x))))
-   print("z = ",z,"bar = ",barp,"val = ",x)
+   x = ((float(barp)-960) - 40)/10
+   z = (1.0/(1.0 + math.exp(x)))
+   print("z = ",z,"bar = ",barp,"x = ",x)
    
    return z
 
