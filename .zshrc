@@ -14,10 +14,15 @@ export GREP_OPTIONS='--color=auto'
 export GOROOT="/usr/local/go"
 HISTSIZE=10000000
 SAVEHIST=10000000
+setopt auto_cd
+cdpath=( . $HOME)
 
 # some aliases
 #alias sfe="sudo srm -zsv"
 
+alias jenk="java -jar ~/lib/jenkins-cli.jar -auth tjordan:w8112358 -s http://localhost:8080"
+alias sj="nohup java -jar /usr/local/Cellar/jenkins-lts/2.263.3/libexec/jenkins.war &"
+alias jcli="java -jar ~/lib/jenkins-cli.jar -l tjordan  -s http://localhost:8080/ -webSocket"
 alias z="vi ~/.zshrc;. ~/.zshrc"
 alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
 alias _="cd $_"
@@ -97,7 +102,7 @@ alias ....="cd ../../..;"
 alias crc="./cruisecontrol.sh"
 alias cs=csvn
 alias e="cd ~;vi .vimrc;cd -"
-alias h='history'
+alias h='history -100'
 alias j=jobs
 alias k1="kill -9 %1"
 alias k2="kill -9 %2"
