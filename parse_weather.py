@@ -178,7 +178,7 @@ elif parcip_type == "hail":
 elif parcip_type == "sleet":
 	parcip_type_icon="assets/Sleet.png"
 else:
-	parcip_type_icon="assets/umbrella.jpg"
+	parcip_type_icon="assets/catus.png"
 output = output.replace('__PARCIP_TYPE_ICON__',parcip_type_icon)
 
 visibility=data["currently"]["visibility"]
