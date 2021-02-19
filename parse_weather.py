@@ -1,4 +1,5 @@
 import os
+import cgi
 import math
 import urllib2
 from xml.dom import minidom
@@ -53,7 +54,7 @@ feels_like=int(data["currently"]["apparentTemperature"])
 wind_degree=int(data["currently"]["windBearing"])
 wind_dir_url="assets/W_IND_"+getCardinal(wind_degree)+".jpg"
 
-status=data["currently"]["summary"] 
+status=cgi.escape(data["currently"]["summary"] )
 output = output.replace('STATUS',status) 
 
 #need to map icons
@@ -155,7 +156,7 @@ output = output.replace('PRECIP_TXT',str(int(precip*100)))
 
 # Insert icons and temperatures
 
-summary=data["hourly"]["summary"]
+summary=cgi.escape(data["hourly"]["summary"])
 output = output.replace('SUMMARY',summary)
 wind=str(int(data["currently"]["windSpeed"]+.5))
 
