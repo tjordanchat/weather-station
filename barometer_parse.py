@@ -10,11 +10,23 @@ import numpy as np
 import math, sys
 
 def sig(barp):
-   x = ((float(barp)-960) - 40)
-   z = (1.0/(1.0 + (math.exp(x))))
-   print("z = ",z,"bar = ",barp,"x = ",x)
+    bar=int((float(barp) - 982)/17)
+    z = 1.0 - (bar * 0.25)
+    if ( z <= 0.50 ):
+        z = 0.0
+    elif ( z >= 0.75 ):
+        z = 0.50
+    else:
+        z = 1.0
+    print("z = ",z,"bar = ",bar,"x = ",barp)
+    return z
+
+#def sig(barp):
+#   x = ((float(barp)-960) - 40)
+#   z = (1.0/(1.0 + (math.exp(x))))
+#   print("z = ",z,"bar = ",barp,"x = ",x)
    
-   return z
+#   return z
 
 with open('DS.json') as f:
     data = json.load(f)
