@@ -71,7 +71,18 @@ else:
     tending="Sun"
 # 33.864
 
-bar=int((float(pressure) - 982)/17)
+if (pressure < 987):
+    bar = 0
+elif (pressure < 1003):
+    bar = 1
+elif (pressure < 1018):
+    bar = 2
+elif (pressure < 1033):
+    bar = 3
+else:
+    bar = 4
+
+#bar=int((float(pressure) - 982)/17)
 bar_url = 'assets/'+tending+"_" + str(bar) + '.jpg'
 output = output.replace('ICON_BAR', bar_url)
 
