@@ -10,15 +10,14 @@ import numpy as np
 import math, sys
 
 def sig(barp):
-    bar=int((float(barp) - 982)/17)
-    z = 1.0 - (bar * 0.25)
-    if ( z <= 0.50 ):
+    if ( barp >= 1010 ):
         z = 0.0
-    elif ( z >= 0.75 ):
-        z = 0.50
+    elif (barp <= 990):
+        z = 1
     else:
-        z = 1.0
-    print("z = ",z,"bar = ",bar,"x = ",barp)
+        z = 1 - ((barp - 990)/20)
+
+    print("z = ",z,"barp = ",barp)
     return z
 
 #def sig(barp):
