@@ -10,12 +10,12 @@ import numpy as np
 import math, sys
 
 def sig(barp):
-    if ( barp >= 1010 ):
+    if ( barp >= 1015 ):
         z = 0.0
     elif (barp <= 990):
         z = 1
     else:
-        z = 1 - ((barp - 990)/20)
+        z = 1 - ((barp - 990)/25)
 
     print("z = ",z,"barp = ",barp)
     return z

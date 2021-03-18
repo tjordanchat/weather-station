@@ -73,7 +73,7 @@ else:
 
 if (pressure < 987):
     bar = 0
-elif (pressure < 1003):
+elif (pressure < 1001):
     bar = 1
 elif (pressure < 1018):
     bar = 2
