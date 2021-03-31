@@ -1,0 +1,182 @@
+
+cd "$(dirname "$0")"
+dirname "$0"
+++ dirname ./launch.sh
++ cd .
+
+DARK_KEY=$(cat pass.yml | /usr/local/bin/yq e .darksky.key -)
+cat pass.yml | /usr/local/bin/yq e .darksky.key -
+++ cat pass.yml
+++ /usr/local/bin/yq e .darksky.key -
+cat: pass.yml: No such file or directory
++ DARK_KEY=
+DARK_LAT=$(cat pass.yml | /usr/local/bin/yq e .darksky.coord.lat -)
+cat pass.yml | /usr/local/bin/yq e .darksky.coord.lat -
+++ cat pass.yml
+++ /usr/local/bin/yq e .darksky.coord.lat -
+cat: pass.yml: No such file or directory
++ DARK_LAT=
+DARK_LONG=$(cat pass.yml | /usr/local/bin/yq e .darksky.coord.long -)
+cat pass.yml | /usr/local/bin/yq e .darksky.coord.long -
+++ cat pass.yml
+++ /usr/local/bin/yq e .darksky.coord.long -
+cat: pass.yml: No such file or directory
++ DARK_LONG=
+APIX_KEY=$(cat pass.yml | /usr/local/bin/yq e .apixu.key - )
+cat pass.yml | /usr/local/bin/yq e .apixu.key - 
+++ cat pass.yml
+++ /usr/local/bin/yq e .apixu.key -
+cat: pass.yml: No such file or directory
++ APIX_KEY=
+APIX_ZIP=$(cat pass.yml | /usr/local/bin/yq e .apixu.zip -)
+cat pass.yml | /usr/local/bin/yq e .apixu.zip -
+++ cat pass.yml
+++ /usr/local/bin/yq e .apixu.zip -
+cat: pass.yml: No such file or directory
++ APIX_ZIP=
+
+curl https://api.darksky.net/forecast/$DARK_KEY/$DARK_LAT,$DARK_LONG | /usr/local/bin/jq . > DS.json
++ curl https://api.darksky.net/forecast//,
++ /usr/local/bin/jq .
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    48    0    48    0     0    315      0 --:--:-- --:--:-- --:--:--   315
+
+curl -k "http://api.apixu.com/v1/forecast.json?key=$APIX_KEY&q=$APIX_ZIP&days=5"  | /usr/local/bin/jq . > AP.json
++ curl -k 'http://api.apixu.com/v1/forecast.json?key=&q=&days=5'
++ /usr/local/bin/jq .
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1542  100  1542    0     0  12639      0 --:--:-- --:--:-- --:--:-- 12639
+
+MOON_PHASE=$(cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase )
+cat DS.json | /usr/local/bin/jq .daily.data[0].moonPhase 
+++ cat DS.json
+++ /usr/local/bin/jq '.daily.data[0].moonPhase'
++ MOON_PHASE=null
+#curl -k https://api.usno.navy.mil/imagery/moon.png > moon.png
+
+rm -f namfntsfcwbg.gif
++ rm -f namfntsfcwbg.gif
+wget https://www.wpc.ncep.noaa.gov/sfc/namfntsfcwbg.gif
++ wget https://www.wpc.ncep.noaa.gov/sfc/namfntsfcwbg.gif
+./launch.sh: line 20: wget: command not found
+rm -f ECVS.JPG
++ rm -f ECVS.JPG
+#rm -f ./news/*
+wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
++ wget https://www.goes.noaa.gov/GIFS/ECVS.JPG
+./launch.sh: line 23: wget: command not found
+./generate_percip_line.sh
++ ./generate_percip_line.sh
+Traceback (most recent call last):
+  File "percip_parse.py", line 27, in <module>
+    percip=data["hourly"]["data"][x]["precipProbability"]
+KeyError: 'hourly'
+convert: unable to open image 'percip-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `percip-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_temp_line.sh
++ ./generate_temp_line.sh
+Traceback (most recent call last):
+  File "temp_parse.py", line 27, in <module>
+    temp_rel=float(data["hourly"]["data"][x]["temperature"])
+KeyError: 'hourly'
+convert: unable to open image 'temp-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `temp-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_sunrise.sh
++ ./generate_sunrise.sh
+Traceback (most recent call last):
+  File "sunrise_parse.py", line 52, in <module>
+    sunriseTime=data["daily"]["data"][0]["sunriseTime"]
+KeyError: 'daily'
+convert: unable to open image 'sunrise-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `sunrise-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_humid_line.sh
++ ./generate_humid_line.sh
+Traceback (most recent call last):
+  File "humid_parse.py", line 27, in <module>
+    temp_rel=float(data["hourly"]["data"][x]["humidity"])**4
+KeyError: 'hourly'
+convert: unable to open image 'humid-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `humid-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_wind_line.sh
++ ./generate_wind_line.sh
+Traceback (most recent call last):
+  File "wind_parse.py", line 27, in <module>
+    temp_rel=float(data["hourly"]["data"][x]["windSpeed"])
+KeyError: 'hourly'
+convert: unable to open image 'wind-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `wind-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_intensity_line.sh
++ ./generate_intensity_line.sh
+Traceback (most recent call last):
+  File "intensity_parse.py", line 27, in <module>
+    rain_intens=data["hourly"]["data"][x]["precipIntensity"]
+KeyError: 'hourly'
+convert: unable to open image 'intensity-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `intensity-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./generate_barometer_line.sh
++ ./generate_barometer_line.sh
+Traceback (most recent call last):
+  File "barometer_parse.py", line 48, in <module>
+    temp_rel=float(data["hourly"]["data"][x]["pressure"])
+KeyError: 'hourly'
+convert: unable to open image 'barometer-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `barometer-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+./newsapi.sh
++ ./newsapi.sh
+cat: pass.yml: No such file or directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   162  100   162    0     0    835      0 --:--:-- --:--:-- --:--:--   835
+#./calc_moonrise.sh
+sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
++ sed s/__THIS_IS_THE_MOON_PHASE__/null/g
+'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
++ '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=moon.png moon.html
+[0325/122122.299122:ERROR:xattr.cc(63)] setxattr org.chromium.crashpad.database.initialized on file /var/folders/47/98d4l1_s4xb19__6lr1g7_fc0000gn/T/: Operation not permitted (1)
+[0325/122122.300829:ERROR:file_io.cc(91)] ReadExactly: expected 8, observed 0
+[0325/122122.302123:ERROR:xattr.cc(63)] setxattr org.chromium.crashpad.database.initialized on file /var/folders/47/98d4l1_s4xb19__6lr1g7_fc0000gn/T/: Operation not permitted (1)
+[0325/122122.360501:WARNING:headless_browser_main_parts.cc(83)] Cannot create Pref Service with no user data dir.
+[0325/122124.138767:INFO:headless_shell.cc(617)] Written to file moon.png.
+
+#Parse Weather and replace placeholder text in the svg template file
+python parse_weather.py
++ python parse_weather.py
+Traceback (most recent call last):
+  File "parse_weather.py", line 52, in <module>
+    feels_like=int(data["currently"]["apparentTemperature"])
+KeyError: 'currently'
+
+#convert svg to png, and rotate 90 degrees for horizontal view
+/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
++ /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
+convert: unable to open image 'weather-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `weather-processed.png' @ error/convert.c/ConvertImageCommand/3322.
+rm -f weather-processed2.png
++ rm -f weather-processed2.png
+/usr/local/bin/convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
++ /usr/local/bin/convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
+convert: unable to open image 'weather-processed.svg': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `weather-processed2.png' @ error/convert.c/ConvertImageCommand/3322.
+/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
++ /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
+convert: unable to open image 'namfntsfcwbg.gif': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `namfntsfcwbg90.gif' @ error/convert.c/ConvertImageCommand/3322.
+/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 ECVS.JPG ECVS90.JPG
++ /usr/local/bin/convert -depth 8 -quality 100 -rotate 90 ECVS.JPG ECVS90.JPG
+convert: unable to open image 'ECVS.JPG': No such file or directory @ error/blob.c/OpenBlob/3537.
+convert: no images defined `ECVS90.JPG' @ error/convert.c/ConvertImageCommand/3322.
+
+#We optimize the image (necessary for viewing on the kindle)
+/usr/local/bin/pngcrush -q -c 0 weather-processed.png weather-script-output.png
++ /usr/local/bin/pngcrush -q -c 0 weather-processed.png weather-script-output.png
+Could not find file: weather-processed.png
+Could not find file: weather-script-output.png
+CPU time decode 0.000000, encode 0.000000, other 0.000083, total 0.000083 sec
+/usr/local/bin/pngcrush -q -c 0 weather-processed2.png weather-script-output2.png
++ /usr/local/bin/pngcrush -q -c 0 weather-processed2.png weather-script-output2.png
+Could not find file: weather-processed2.png
+Could not find file: weather-script-output2.png
+CPU time decode 0.000000, encode 0.000000, other 0.000072, total 0.000072 sec
+

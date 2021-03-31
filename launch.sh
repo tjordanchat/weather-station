@@ -1,6 +1,7 @@
 #!/bin/sh
 set -xv
 
+echo "##########################################################################"
 cd "$(dirname "$0")"
 
 DARK_KEY=$(cat pass.yml | /usr/local/bin/yq e .darksky.key -)
