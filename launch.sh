@@ -1,6 +1,8 @@
 #!/bin/sh
 set -xv
 
+PATH=$PATH:/opt/homebrew/bin
+
 echo "##########################################################################"
 cd "$(dirname "$0")"
 
@@ -37,12 +39,14 @@ sed "s/__THIS_IS_THE_MOON_PHASE__/$MOON_PHASE/g" < PRE-moon.html > moon.html
 #Parse Weather and replace placeholder text in the svg template file
 python parse_weather.py
 
+rm -f weather-processed.png
+
 #convert svg to png, and rotate 90 degrees for horizontal view
-/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
-rm -f weather-processed2.png
-/usr/local/bin/convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
-/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
-/usr/local/bin/convert -depth 8 -quality 100 -rotate 90 ECVS.JPG ECVS90.JPG
+alias convert=/opt/homebrew/Cellar/imagemagick/7.0.11-13_2/bin/convert
+convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
+convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
+convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
+convert -depth 8 -quality 100 -rotate 90 ECVS.JPG ECVS90.JPG
 
 #We optimize the image (necessary for viewing on the kindle)
 /usr/local/bin/pngcrush -q -c 0 weather-processed.png weather-script-output.png
