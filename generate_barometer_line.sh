@@ -1,6 +1,6 @@
 python barometer_parse.py
 
-alias convert=/opt/homebrew/Cellar/imagemagick/7.0.11-13_2/bin/convert
+alias convert=/opt/homebrew/Cellar/imagemagick/*/bin/convert
 #convert svg to png, and rotate 90 degrees for horizontal view
 convert -depth 8 -rotate 0 barometer-processed.svg barometer-processed.png
 

@@ -42,7 +42,7 @@ python parse_weather.py
 rm -f weather-processed.png
 
 #convert svg to png, and rotate 90 degrees for horizontal view
-alias convert=/opt/homebrew/Cellar/imagemagick/7.0.11-13_2/bin/convert
+alias convert=/opt/homebrew/Cellar/imagemagick/*/bin/convert
 convert -depth 8 -quality 100 -rotate 90 weather-processed.svg weather-processed.png
 convert -depth 8 -quality 100 weather-processed.svg weather-processed2.png
 convert -depth 8 -quality 100 -rotate 90 namfntsfcwbg.gif namfntsfcwbg90.gif
