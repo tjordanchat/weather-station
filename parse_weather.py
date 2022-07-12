@@ -229,6 +229,8 @@ humidity=int(float(data["currently"]["humidity"])*100)
 
 if humidity > fhumid:
    output = output.replace('HUPDOWN','assets/DOWN.jpg')
+elif humidity == fhumid:
+    output = output.replace('HUPDOWN','assets/Equal.jpg')
 else:
    output = output.replace('HUPDOWN','assets/UP.jpg')
 
@@ -241,6 +243,8 @@ output = output.replace('SPEED',str(int(round(float(speed)))))
 ftemp=data["hourly"]["data"][2]["temperature"]
 if temp > ftemp:
    updown="assets/DOWN.jpg"
+elif temp == ftemp:
+    updown="assets/Equal.jpg"
 else:
    updown="assets/UP.jpg"
 
